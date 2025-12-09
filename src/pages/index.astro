@@ -1,16 +1,24 @@
 ---
-
+import AboutUs from "@components/AboutUs.astro";
+import CTABanner from "@components/CTABanner.astro";
+import GlobalImpact from "@components/GlobalImpact.astro";
+import GlobalThemes from "@components/GlobalThemes.astro";
+import Hero from "@components/Hero.astro";
+import Industries from "@components/Industries.astro";
+import KeyStats from "@components/KeyStats.astro";
+import Methodology from "@components/Methodology.astro";
+import WhyChooseUs from "@components/WhyChooseUs.astro";
+import Layout from "@layouts/layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Hero/>
+  <KeyStats/>
+  <AboutUs/>
+  <Methodology/>
+  <GlobalImpact/>
+  <GlobalThemes/>
+  <Industries/>
+  <WhyChooseUs/>
+  <CTABanner/>
+</Layout>
