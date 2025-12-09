@@ -1,4 +1,8 @@
-<div>
+---
+import { Linkedin, Mail, MapPin } from "@lucide/astro";
+---
+
+<div class="flex flex-col gap-10">
   <h2 class="mb-6 text-2xl font-bold text-gray-900">Contact Information</h2>
   <p class="mb-10 leading-relaxed text-gray-600">
     We invite you to reach out to discuss your specific financial needs. Our
@@ -7,14 +11,15 @@
   </p>
 
   <div class="space-y-8">
+    <!-- Address -->
     <div class="flex items-start gap-4">
       <div
         class="bg-brand-50 text-brand-700 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg"
       >
-        <i class="fas fa-location-dot text-xl"></i>
+        <MapPin />
       </div>
       <div>
-        <h4 class="mb-1 font-bold text-gray-900">Headquarters</h4>
+        <h3 class="mb-1 font-bold text-gray-900">Headquarters</h3>
         <p class="text-sm text-gray-600">
           H. No. 20-148, B18, Dayanand Nagar
           <br />
@@ -25,27 +30,29 @@
       </div>
     </div>
 
+    <!-- Email -->
     <div class="flex items-start gap-4">
       <div
         class="bg-brand-50 text-brand-700 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg"
       >
-        <i class="fas fa-envelope text-xl"></i>
+        <Mail />
       </div>
       <div>
-        <h4 class="mb-1 font-bold text-gray-900">Email Us</h4>
+        <h3 class="mb-1 font-bold text-gray-900">Email Us</h3>
         <p class="text-sm text-gray-600">info@numiq.in</p>
         <p class="text-sm text-gray-600">support@numiq.in</p>
       </div>
     </div>
 
+    <!-- Social -->
     <div class="flex items-start gap-4">
       <div
         class="bg-brand-50 text-brand-700 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg"
       >
-        <i class="fab fa-linkedin-in text-xl"></i>
+        <Linkedin />
       </div>
       <div>
-        <h4 class="mb-1 font-bold text-gray-900">Connect</h4>
+        <h3 class="mb-1 font-bold text-gray-900">Connect</h3>
         <a
           href="https://www.linkedin.com/company/numiqindia/"
           target="_blank"
@@ -58,7 +65,7 @@
 
   <!-- Map Placeholder -->
   <div
-    class="relative mt-10 h-64 overflow-hidden rounded-lg border border-gray-200 bg-gray-100"
+    class="relative h-64 overflow-hidden rounded-lg border border-gray-200 bg-gray-100"
   >
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.452664539665!2d78.5330!3d17.4429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae1812833075e7a9!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"

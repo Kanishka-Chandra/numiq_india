@@ -11,11 +11,3 @@
 }
 
 /* Image Overlays */
-
-.section-overlay {
-  background: linear-gradient(
-    to right,
-    rgba(30, 58, 138, 0.95),
-    rgba(30, 58, 138, 0.85)
-  );
-}
