@@ -1,0 +1,47 @@
+<section
+  id="home"
+  class="hero-section relative h-svh overflow-hidden px-8 py-10 md:px-16 md:py-20"
+>
+  <!-- Background Image -->
+  <img
+    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    alt="Modern financial district skyscrapers"
+    class="absolute inset-0 -z-10 h-full w-full object-cover opacity-90"
+  />
+
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <div
+        class="bg-brand-800/20 border-brand-700/30 text-brand-100 mb-6 inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm"
+      >
+        Global Financial Excellence
+      </div>
+      <h1
+        class="mb-6 text-4xl leading-[1.1] font-bold tracking-tight text-balance text-white md:text-6xl"
+      >
+        Precision in
+        <span class="text-brand-200">Financial Intelligence</span> & Strategic Growth.
+      </h1>
+      <p
+        class="text-brand-50 mb-10 max-w-2xl text-lg leading-relaxed text-balance md:text-xl"
+      >
+        Numiq India empowers forward-thinking businesses with next-generation
+        accounting, rigorous auditing, and bespoke corporate advisory solutions.
+        We bridge the critical gap between raw data and strategic
+        decision-making.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -5; /* sits above background image but below content */
+    background: linear-gradient(135deg, #1e3a8ae6 0%, #2563ebcc 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+</style>

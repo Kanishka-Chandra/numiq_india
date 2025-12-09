@@ -1,0 +1,77 @@
+---
+import { Handshake } from "@lucide/astro";
+---
+
+<section
+  id="about"
+  class="relative overflow-hidden bg-white py-20 before:pointer-events-none before:absolute before:inset-0 before:z-10 before:bg-linear-to-b before:from-transparent before:to-white before:opacity-100 md:py-32"
+>
+  <!-- Subtle background image -->
+  <img
+    src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    alt="Abstract money background"
+    class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 grayscale"
+  />
+
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="items-center lg:grid lg:grid-cols-2 lg:gap-16">
+      <!-- Content -->
+      <div class="mb-12 lg:mb-0">
+        <h2
+          class="text-brand-700 mb-3 text-sm font-bold tracking-wider uppercase"
+        >
+          About Numiq India
+        </h2>
+        <h3
+          class="mb-6 text-3xl leading-tight font-bold text-gray-900 md:text-4xl"
+        >
+          Redefining Financial Stewardship for the
+          <span class="text-brand-700">Modern Era</span>.
+        </h3>
+        <div class="space-y-6 text-lg leading-relaxed text-gray-600">
+          <p>
+            At Numiq India, we believe that true financial success lies in the
+            details. Established to serve the evolving, complex needs of Indian
+            and global enterprises, we provide a comprehensive suite of
+            financial services characterized by unyielding integrity, continuous
+            innovation, and strategic intelligence.
+          </p>
+          <p>
+            Our team comprises seasoned chartered accountants, financial
+            analysts, and strategy consultants dedicated to simplifying complex
+            financial landscapes. From foundational bookkeeping and compliance
+            to high-level strategic auditing and M&A advisory, Numiq stands as a
+            proactive partner in your journey toward sustainable, long-term
+            growth.
+          </p>
+          <p>
+            We don't just report on the past; we analyze it to illuminate the
+            future.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div
+        class="after:bg-brand-900/10 group relative aspect-4/3 w-full overflow-hidden rounded-lg bg-gray-100 shadow-lg after:absolute after:inset-0 after:z-10"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="Professional team in a modern office meeting"
+          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div
+          class="absolute inset-x-8 bottom-8 z-20 flex items-center gap-2 rounded border border-white/50 bg-white/95 p-6 shadow-sm backdrop-blur"
+        >
+          <Handshake class="text-brand-700 size-8" />
+          <div class="flex flex-col">
+            <p class="text-lg font-bold text-gray-900">Trusted Advisors</p>
+            <p class="text-sm text-gray-500">
+              Committed to your long-term success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

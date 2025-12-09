@@ -1,0 +1,18 @@
+---
+import ContactForm from "@components/Contact/ContactForm.astro";
+import ContactInfo from "@components/Contact/ContactInfo.astro";
+import Hero from "@components/Contact/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <Hero />
+  <section class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
+        <ContactInfo />
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</Layout>

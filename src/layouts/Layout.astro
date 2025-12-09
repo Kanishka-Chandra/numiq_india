@@ -7,37 +7,20 @@ import "@styles/global.css";
 <html lang="en">
   <head>
     <!-- TODO: Add head Info -->
-    <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
     <title>Numiq India</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    >
+    />
   </head>
   <body
-    class="font-sans text-gray-900 antialiased bg-white selection:bg-brand-100 selection:text-brand-900"
+    class="selection:bg-brand-100 selection:text-brand-900 bg-white font-sans text-gray-900 antialiased"
   >
-    <Navbar/>
-    <slot/>
-    <Footer/>
-    <script>
-      const btn = document.getElementById("mobile-menu-btn");
-      const menu = document.getElementById("mobile-menu");
-
-      if (btn && menu) {
-        btn.addEventListener("click", () => {
-          menu.classList.toggle("hidden");
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll("#mobile-menu a").forEach((link) => {
-          link.addEventListener("click", () => {
-            menu.classList.add("hidden");
-          });
-        });
-      }
-    </script>
+    <Navbar />
+    <slot />
+    <Footer />
   </body>
 </html>

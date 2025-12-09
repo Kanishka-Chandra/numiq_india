@@ -1,0 +1,80 @@
+<div
+  class="rounded-xl border border-gray-100 bg-white p-8 shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)]"
+>
+  <h3 class="mb-6 text-xl font-bold text-gray-900">Send us a Message</h3>
+  <form
+    onsubmit="event.preventDefault(); alert('Thank you. Your message has been sent to Numiq India.');"
+    class="space-y-6"
+  >
+    <div>
+      <label for="name" class="mb-1 block text-sm font-medium text-gray-700">
+        Full Name
+      </label>
+      <input
+        type="text"
+        id="name"
+        required
+        class="focus:border-brand-600 focus:ring-brand-200 focus:ring-opacity-50 form-input w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:ring"
+        placeholder="John Doe"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="mb-1 block text-sm font-medium text-gray-700">
+        Business Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        required
+        class="focus:border-brand-600 focus:ring-brand-200 focus:ring-opacity-50 form-input w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:ring"
+        placeholder="john@company.com"
+      />
+    </div>
+
+    <div>
+      <label for="service" class="mb-1 block text-sm font-medium text-gray-700">
+        Service Requirement
+      </label>
+      <div class="relative">
+        <select
+          id="service"
+          class="focus:border-brand-600 focus:ring-brand-200 focus:ring-opacity-50 form-input w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 transition-colors focus:ring"
+        >
+          <option value="" disabled selected>Select a service...</option>
+          <option value="virtual-cfo">Virtual CFO Services</option>
+          <option value="accounting">Accounting & Bookkeeping</option>
+          <option value="taxation">Taxation & Compliance</option>
+          <option value="mis">Financial Reporting (MIS)</option>
+          <option value="payroll">Payroll Management</option>
+          <option value="valuation">Valuation & Due Diligence</option>
+          <option value="other">Other / General Inquiry</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500"
+        >
+          <i class="fas fa-chevron-down text-xs"></i>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="message" class="mb-1 block text-sm font-medium text-gray-700">
+        Additional Remarks
+      </label>
+      <textarea
+        id="message"
+        rows="4"
+        class="focus:border-brand-600 focus:ring-brand-200 focus:ring-opacity-50 form-input w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:ring"
+        placeholder="Please describe your specific requirements or challenges..."
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-brand-800 hover:bg-brand-900 w-full transform rounded-lg py-4 font-bold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+    >
+      Submit Request
+    </button>
+  </form>
+</div>
