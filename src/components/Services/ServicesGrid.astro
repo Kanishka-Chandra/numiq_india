@@ -12,71 +12,75 @@ import {
 const services = [
   {
     icon: ChessKing,
-    title: "Virtual CFO & Strategic Advisory",
+    title: "Transaction & Investment Analysis Support",
     description:
-      "High-level financial leadership without the full-time overhead. We handle cash flow management, budgeting, financial modeling, and strategic planning to guide your business decisions.",
+      "Specialized analytical support for private market funds, investment banks, and corporates. We assist your internal teams with robust financial models, valuation support, benchmarking studies, and high-quality materials for investment committees and management.",
     features: [
-      "Cash Flow Optimization",
-      "Financial Health Checks",
-      "Investor Readiness",
+      "Financial Modeling & Valuation Support",
+      "Benchmarking & Data Analysis",
+      "IC Memos, Pitch Decks & Management Reports",
     ],
   },
   {
     icon: ChartLine,
-    title: "Financial Reporting & Analytics (MIS)",
+    title: "Dashboarding, Reporting & Business Intelligence",
     description:
-      "Transforming raw data into actionable business intelligence. We design and implement customized MIS dashboards that track KPIs and operational performance.",
+      "Clear, decision-ready insights through Excel and BI-driven dashboards. We structure, analyze, and visualize operational and financial data to help clients monitor performance and make informed strategic decisions.",
     features: [
-      "Monthly Performance Reports",
-      "Variance Analysis",
-      "Profitability Tracking",
+      "Custom Excel / BI Dashboards",
+      "Performance & Trend Analysis",
+      "Management Reporting Packs",
     ],
   },
   {
     icon: Calculator,
-    title: "Accounting & Operational Finance",
+    title: "Accounting & Bookkeeping Support",
     description:
-      "The foundation of your financial health. We ensure precise recording of day-to-day transactions, maintaining pristine books that stand up to any audit.",
+      "End-to-end back-office accounting assistance designed to maintain accuracy and operational continuity. We support clients with core accounting workflows, reconciliations, and periodic management accounts.",
     features: [
-      "Bookkeeping & Reconciliations",
-      "Accounts Payable/Receivable",
-      "Fixed Asset Management",
+      "GL, AP/AR & Reconciliations",
+      "Month-End Close Activities",
+      "Management Accounts Preparation",
     ],
   },
   {
     icon: Scale,
-    title: "Taxation & Regulatory Compliance",
+    title: "Financial Planning & Analysis (FP&A)",
     description:
-      "Navigating the complex landscape of direct and indirect taxes. We ensure timely filings and strategic tax optimization to protect your bottom line.",
+      "Structured FP&A support to strengthen internal planning processes. We assist with budgets, forecasts, variance analysis, and KPI reporting to help clients track performance and plan ahead with greater clarity.",
     features: [
-      "GST Filing & Compliance",
-      "Income Tax Returns (Corporate/Individual)",
-      "TDS/TCS Compliance",
+      "Budgeting & Forecasting",
+      "Cash Flow Modeling",
+      "Variance & KPI Analysis",
     ],
   },
   {
     icon: Users,
-    title: "Payroll & Compensation Management",
+    title: "Offshore Analyst & Team Extension",
     description:
-      "Seamless management of your human capital finances. We handle everything from salary structuring to final disbursement and statutory compliance.",
+      "Flexible, high-quality offshore analytical support that integrates seamlessly with your internal workflows. Ideal for scaling project capacity without adding fixed headcount.",
     features: [
-      "Salary Processing",
-      "PF & ESI Compliance",
-      "Form 16 Generation",
+      "Dedicated Analyst Support",
+      "Research & Data Compilation",
+      "Process Documentation & Standardization",
     ],
   },
   {
     icon: Search,
-    title: "Due Diligence & Valuation",
+    title: "Quality Review & Documentation Support",
     description:
-      "Critical support for M&A, fundraising, and restructuring. We provide independent valuations and rigorous financial due diligence reports.",
-    features: ["Business Valuation", "M&A Due Diligence", "Financial Modeling"],
+      "Rigorous review and preparation of analytical documents, models, and reports. We enhance clarity, consistency, and presentation quality to align with global institutional standards.",
+    features: [
+      "Model & Report Review",
+      "Presentation Structuring",
+      "Analytical Documentation",
+    ],
   },
 ];
 ---
 
 <section class="bg-gray-50 px-8 py-10 md:px-16 md:py-20">
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
     {
       services.map((service) => {
         const Icon = service.icon;

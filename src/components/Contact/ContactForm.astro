@@ -10,6 +10,30 @@ import { ChevronDown } from "@lucide/astro";
     onsubmit="event.preventDefault(); alert('Thank you. Your message has been sent to Numiq India.');"
     class="space-y-6"
   >
+    <!--
+    Netlify form:
+      - name must match the hidden input "form-name" value
+      - netlify-honeypot used to reduce spam (field name: bot-field)
+      - Optional: set action="/thank-you" to redirect to a thank-you page
+  -->
+    <!-- <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="space-y-6"
+    >
+  
+   /*Required for Netlify to identify the form */
+    <input type="hidden" name="form-name" value="contact" />
+
+    /* Honeypot field (spam trap) */
+    <p class="hidden">
+      <label
+        >Don't fill this out if you're human: <input name="bot-field" /></label
+      >
+    </p> -->
+
     <div>
       <label for="name" class="mb-1 block text-sm font-medium text-gray-700">
         Full Name
@@ -46,14 +70,27 @@ import { ChevronDown } from "@lucide/astro";
           class="focus:border-brand-600 focus:ring-brand-200 focus:ring-opacity-50 form-input w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 transition-colors focus:ring"
         >
           <option value="" disabled selected>Select a service...</option>
-          <option value="virtual-cfo">Virtual CFO Services</option>
-          <option value="accounting">Accounting & Bookkeeping</option>
-          <option value="taxation">Taxation & Compliance</option>
-          <option value="mis">Financial Reporting (MIS)</option>
-          <option value="payroll">Payroll Management</option>
-          <option value="valuation">Valuation & Due Diligence</option>
+          <option value="tia-support"
+            >Transaction & Investment Analysis Support</option
+          >
+          <option value="dashboarding-reporting"
+            >Dashboarding, Reporting & Business Intelligence</option
+          >
+          <option value="accounting-bookkeeping"
+            >Accounting & Bookkeeping Support</option
+          >
+          <option value="fpa-support"
+            >Financial Planning & Analysis (FP&A)</option
+          >
+          <option value="analyst-extension"
+            >Offshore Analyst & Team Extension</option
+          >
+          <option value="quality-review"
+            >Quality Review & Documentation Support</option
+          >
           <option value="other">Other / General Inquiry</option>
         </select>
+
         <div
           class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500"
         >
