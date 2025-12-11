@@ -2,22 +2,13 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import "@styles/global.css";
+import CommonHead from "./CommonHead.astro";
 ---
 
 <html lang="en">
-  <head>
-    <!-- TODO: Add head Info -->
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Numiq</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    /> -->
-  </head>
+  <CommonHead />
   <body
-    class="selection:bg-brand-100 selection:text-brand-900 bg-white font-sans text-gray-900 antialiased"
+    class="selection:bg-brand-100 selection:text-brand-900 bg-white font-sans text-gray-900 antialiased *:mx-auto *:max-w-400"
   >
     <Navbar />
     <slot />
