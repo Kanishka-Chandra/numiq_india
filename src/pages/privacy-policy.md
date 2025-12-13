@@ -2,6 +2,8 @@
 layout: ../layouts/MarkdownLayout.astro
 ---
 
+# Placeholder Content
+
 # Privacy Policy for Pranita Ventures LLP
 
 _Last Updated: December 11, 2025_
@@ -106,7 +108,7 @@ Depending on your jurisdiction, you may have rights to:
 - Restrict or object to processing
 - Request a copy of your data
 
-To exercise these rights, email us at **[support@pranitaventures.com](mailto:support@pranitaventures.com)**.
+To exercise these rights, email us at **[support@numiq.co](mailto:support@numiq.co)**.
 
 ---
 
@@ -131,6 +133,6 @@ Your continued engagement signifies acceptance of the revised Policy.
 For any questions or concerns about this Privacy Policy:
 
 **Pranita Ventures LLP**  
-Email: [support@pranitaventures.com](mailto:support@pranitaventures.com)
+Email: [support@numiq.co](mailto:support@numiq.co)
 
 ---

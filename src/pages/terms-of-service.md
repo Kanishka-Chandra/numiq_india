@@ -2,6 +2,8 @@
 layout: ../layouts/MarkdownLayout.astro
 ---
 
+# Placeholder Content
+
 # Terms of Service for Pranita Ventures LLP
 
 _Last Updated: December 11, 2025_
@@ -136,6 +138,6 @@ These Terms are governed by the laws of **{{Jurisdiction}}**, without regard to 
 For inquiries related to these Terms:
 
 **Pranita Ventures LLP**  
-Email: [support@pranitaventures.com](mailto:support@pranitaventures.com)
+Email: [support@numiq.co](mailto:support@numiq.co)
 
 ---
