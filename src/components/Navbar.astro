@@ -2,8 +2,13 @@
 import { MenuIcon } from "@lucide/astro";
 
 const navbarLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#methodology", label: "Methodology" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why-choose-us", label: "Why Choose Us" },
+  { href: "/#global-impact", label: "Global Impact" },
+  { href: "/#industries", label: "Industries" },
   { href: "/contact", label: "Contact" },
 ];
 ---
@@ -19,7 +24,7 @@ const navbarLinks = [
     </a>
 
     <!-- Desktop Menu -->
-    <div class="hidden items-center gap-6 md:flex">
+    <div class="mx-auto hidden items-center gap-6 md:flex">
       {
         navbarLinks.map((link) => (
           <a
@@ -43,7 +48,7 @@ const navbarLinks = [
   <!-- Mobile Menu Panel -->
   <div
     id="mobile-menu"
-    class="bg-brand-50 hidden w-full border-t border-gray-100 md:hidden"
+    class="bg-brand-50 border-brand-200 hidden w-full border-t md:hidden"
   >
     <div class="flex flex-col items-stretch justify-center gap-2">
       {

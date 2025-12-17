@@ -1,30 +1,30 @@
 ---
-import { Building2, Factory, HandCoins, Laptop } from "@lucide/astro";
+import { Building2, Landmark, Rocket, TrendingUp } from "@lucide/astro";
 
 const sectors = [
   {
-    title: "Technology & SaaS",
+    title: "Investment & Asset Management",
     description:
-      "Optimizing revenue recognition, R&D credits, and scaling financial infrastructure for high-growth tech firms.",
-    icon: Laptop,
+      "Strategic portfolio management and asset optimization for sustainable growth and long-term value creation.",
+    icon: TrendingUp,
   },
   {
-    title: "Manufacturing",
+    title: "Banking, Capital Markets & Lending",
     description:
-      "Streamlining supply chain finance, inventory valuation, and cost accounting for operational efficiency.",
-    icon: Factory,
+      "Comprehensive financial solutions for banking institutions, capital market operations, and lending structures.",
+    icon: Landmark,
   },
   {
-    title: "Fintech & NBFCs",
+    title: "Advisory, Accounting & Real Assets",
     description:
-      "Navigating complex regulatory compliance, risk management, and capital structuring support for financial innovators.",
-    icon: HandCoins,
-  },
-  {
-    title: "Real Estate",
-    description:
-      "Expertise in project finance support, REIT analysis, and tax implications for large-scale property developments.",
+      "Expert guidance in accounting standards, strategic advisory, and management of tangible real estate assets.",
     icon: Building2,
+  },
+  {
+    title: "Entrepreneurs",
+    description:
+      "Empowering founders and startups with financial clarity, growth strategies, and operational scalability.",
+    icon: Rocket,
   },
 ];
 ---
@@ -37,12 +37,14 @@ const sectors = [
     <span
       class="text-brand-700 mb-3 text-sm font-bold tracking-wider uppercase"
     >
-      Industries
+      Who We Help
     </span>
-    <h2 class="text-4xl font-bold text-gray-900">Sectors We Support</h2>
+    <h2 class="text-4xl font-bold text-gray-900">
+      Expertise for Every Industry
+    </h2>
     <p class="text-lg text-gray-600">
-      Specialized financial expertise tailored to the unique challenges of
-      dynamic industries.
+      We understand the unique financial challenges of different businesses and
+      how to solve them.
     </p>
   </div>
 
@@ -50,10 +52,14 @@ const sectors = [
     class="grid grid-cols-1 place-items-stretch gap-8 sm:grid-cols-2 md:grid-cols-4"
   >
     {
-      sectors.map((sector) => {
+      sectors.map((sector, index) => {
         const Icon = sector.icon;
         return (
-          <div class="group hover:bg-brand-900 hover:border-brand-900 relative flex cursor-default flex-col items-start justify-start rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl">
+          <div
+            data-aos="fade-right"
+            data-aos-delay={`${index * 400}`}
+            class="group hover:bg-brand-900 hover:border-brand-900 relative flex cursor-default flex-col items-start justify-start rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl"
+          >
             <div class="text-brand-700 mb-4 text-4xl transition-colors group-hover:text-white">
               <Icon />
             </div>

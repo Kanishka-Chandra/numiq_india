@@ -1,24 +1,36 @@
 ---
-import { ChartPie, Landmark, Shield } from "@lucide/astro";
+import { ChartPie, Landmark, Search, Shield, Users } from "@lucide/astro";
 
 const stats = [
   {
     icon: ChartPie,
-    title: "Data-Driven Insights",
+    title: "Smart Insights",
     description:
-      "Leveraging advanced analytics to provide clear financial visibility and actionable growth strategies that drive performance.",
+      "We use data to show you clearly how your business is doing and how to grow.",
   },
   {
     icon: Shield,
-    title: "Robust Compliance",
+    title: "Stay Compliant",
     description:
-      "Ensuring strict adherence to evolving regulatory frameworks with meticulous, standards-based analysis and risk management support.",
+      "We handle the rules and regulations so you stay safe and follow the law.",
   },
   {
     icon: Landmark,
-    title: "Corporate Support",
+    title: "Business Support",
     description:
-      "Strategic, long-term support for structuring entities, scaling operations, and optimizing business performance globally.",
+      "We help you build and manage your business for the long run, anywhere in the world.",
+  },
+  {
+    icon: Users,
+    title: "Offshore Analyst",
+    description:
+      "We extend your team with flexible, high-quality offshore analytical support.",
+  },
+  {
+    icon: Search,
+    title: "Quality Review",
+    description:
+      "We review and refine models and documents to meet global quality standards.",
   },
 ];
 ---
@@ -27,19 +39,24 @@ const stats = [
   <div class="relative rounded-xl border-b border-gray-100 bg-white shadow-lg">
     <div class="px-4 py-10 sm:px-6 lg:px-8">
       <ul
-        class="grid grid-cols-1 gap-8 divide-y divide-gray-100 text-center md:grid-cols-3 md:divide-x md:divide-y-0 md:text-left"
+        id="key-stats-container"
+        class="divide-brand-100 grid grid-cols-2 place-items-stretch gap-8 text-center sm:grid-cols-4 md:grid-cols-6 md:gap-16 md:text-left"
       >
         {
           stats.map((stat) => {
             const Icon = stat.icon;
             return (
-              <li class="px-4 py-4 md:py-0">
-                <Icon
-                  aria-hidden="true"
-                  class="text-brand-700 mb-3 inline-block h-8 w-8"
-                />
-                <h3 class="text-lg font-bold text-gray-900">{stat.title}</h3>
-                <p class="mt-2 text-sm leading-relaxed text-gray-600">
+              <li
+                data-aos="fade-up"
+                class="col-span-2 flex h-full flex-col px-4"
+              >
+                <div class="mb-4 flex items-center justify-center md:justify-start">
+                  <div class="bg-brand-50 text-brand-700 flex h-12 w-12 items-center justify-center rounded-lg">
+                    <Icon class="h-6 w-6" aria-hidden="true" />
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">{stat.title}</h3>
+                <p class="mt-2 grow text-base leading-relaxed text-gray-600">
                   {stat.description}
                 </p>
               </li>
@@ -50,3 +67,9 @@ const stats = [
     </div>
   </div>
 </section>
+
+<style>
+  #key-stats-container:has(:nth-child(3n + 5):last-child) > :nth-last-child(2) {
+    grid-column-start: 2;
+  }
+</style>

@@ -1,13 +1,5 @@
 ---
-import {
-  Calculator,
-  ChartLine,
-  Check,
-  ChessKing,
-  Scale,
-  Search,
-  Users,
-} from "@lucide/astro";
+import { Calculator, ChartLine, Check, ChessKing, Scale } from "@lucide/astro";
 
 const services = [
   {
@@ -54,38 +46,32 @@ const services = [
       "Variance & KPI Analysis",
     ],
   },
-  {
-    icon: Users,
-    title: "Offshore Analyst & Team Extension",
-    description:
-      "Flexible, high-quality offshore analytical support that integrates seamlessly with your internal workflows. Ideal for scaling project capacity without adding fixed headcount.",
-    features: [
-      "Dedicated Analyst Support",
-      "Research & Data Compilation",
-      "Process Documentation & Standardization",
-    ],
-  },
-  {
-    icon: Search,
-    title: "Quality Review & Documentation Support",
-    description:
-      "Rigorous review and preparation of analytical documents, models, and reports. We enhance clarity, consistency, and presentation quality to align with global institutional standards.",
-    features: [
-      "Model & Report Review",
-      "Presentation Structuring",
-      "Analytical Documentation",
-    ],
-  },
 ];
 ---
 
-<section class="bg-gray-50 px-8 py-10 md:px-16 md:py-20">
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+<section class="space-y-20 bg-white px-8 py-10 md:px-16 md:py-20" id="services">
+  <div class="flex max-w-2xl flex-col items-start justify-between gap-6">
+    <span
+      class="text-brand-700 mb-3 text-sm font-bold tracking-wider uppercase"
+    >
+      Our Services
+    </span>
+    <h2 class="text-3xl font-bold text-gray-900">Services We Offer</h2>
+    <p class="text-lg text-gray-600">
+      We offer a range of services to help you make informed decisions and
+      achieve your financial goals.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
     {
-      services.map((service) => {
+      services.map((service, index) => {
         const Icon = service.icon;
         return (
-          <div class="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div
+            data-aos="fade-up-right"
+            data-aos-delay={`${index * 400}`}
+            class="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
             <div
               class="bg-brand-50 text-brand-700 group-hover:bg-brand-700 mb-6 flex h-14 w-14 items-center justify-center rounded-lg text-2xl transition-colors duration-300 group-hover:text-white"
               aria-hidden="true"

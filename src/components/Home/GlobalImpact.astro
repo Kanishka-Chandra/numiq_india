@@ -21,9 +21,10 @@ const stats = [
 
 <section
   class="bg-brand-900 relative overflow-hidden px-8 py-10 text-white md:px-16 md:py-20"
+  id="global-impact"
 >
   <div class="grid grid-cols-1 place-content-center gap-16 md:grid-cols-2">
-    <div class="flex flex-col gap-6">
+    <div data-aos="fade-right" class="flex flex-col gap-6">
       <span
         class="text-brand-300 mb-3 text-sm font-bold tracking-wider uppercase"
       >
@@ -42,7 +43,7 @@ const stats = [
       </p>
     </div>
 
-    <div class="grid grid-cols-2 gap-8">
+    <div data-aos="fade-left" class="grid grid-cols-2 gap-8">
       {
         stats.map((stat) => (
           <div class="bg-brand-800/50 border-brand-700/50 hover:bg-brand-700/50 group space-y-2 rounded-xl border p-4 backdrop-blur-md transition-colors md:p-8">

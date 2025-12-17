@@ -31,7 +31,10 @@ const framework = [
 ];
 ---
 
-<section class="relative space-y-20 bg-white px-8 py-10 md:px-16 md:py-20">
+<section
+  class="relative space-y-20 bg-white px-8 py-10 md:px-16 md:py-20"
+  id="global-themes"
+>
   <div class="mx-auto flex max-w-3xl flex-col gap-6 text-center">
     <span
       class="text-brand-700 mb-3 text-sm font-bold tracking-wider uppercase"
@@ -51,10 +54,14 @@ const framework = [
 
   <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
     {
-      framework.map((item) => {
+      framework.map((item, index) => {
         const Icon = item.icon;
         return (
-          <div class="group bg-white text-center">
+          <div
+            data-aos="fade-up"
+            data-aos-delay={`${index * 400}`}
+            class="group bg-white text-center"
+          >
             <div class="border-brand-50 text-brand-700 group-hover:border-brand-200 mx-auto mb-8 flex size-24 items-center justify-center rounded-full border-4 bg-white text-4xl shadow-sm transition-all group-hover:shadow-md">
               <Icon />
             </div>
