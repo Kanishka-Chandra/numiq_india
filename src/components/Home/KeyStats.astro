@@ -66,10 +66,13 @@ const stats = [
       </ul>
     </div>
   </div>
-</section>
 
-<style>
-  #key-stats-container:has(:nth-child(3n + 5):last-child) > :nth-last-child(2) {
-    grid-column-start: 2;
-  }
-</style>
+  <style>
+    @media (width >= 48rem /* 768px */) {
+      #key-stats-container:has(:nth-child(3n + 5):last-child)
+        > :nth-last-child(2) {
+        grid-column-start: 2;
+      }
+    }
+  </style>
+</section>
