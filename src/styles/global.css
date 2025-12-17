@@ -1,18 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
-@theme {
-  --color-brand-50: #f0f4fa;
-  --color-brand-100: #e0eaf6;
-  --color-brand-200: #bfdbfe;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-}
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+  html,
+  body {
+    @apply font-urbanist m-0 p-0;
+  }
+}
+
+@theme {
+  --font-urbanist: "Urbanist", sans-serif;
 }

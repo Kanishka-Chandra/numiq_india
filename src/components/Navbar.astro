@@ -6,15 +6,15 @@ const navbarLinks = [
   { href: "/#about", label: "About" },
   { href: "/#methodology", label: "Methodology" },
   { href: "/#services", label: "Services" },
-  { href: "/#why-choose-us", label: "Why Choose Us" },
   { href: "/#global-impact", label: "Global Impact" },
   { href: "/#industries", label: "Industries" },
+  { href: "/#why-choose-us", label: "Why Choose Us" },
   { href: "/contact", label: "Contact" },
 ];
 ---
 
 <header
-  class="bg-brand-50 sticky top-0 z-50 flex flex-col gap-4 border-b border-gray-100 px-8 py-4 shadow-md backdrop-blur-sm transition-all duration-300 md:px-16"
+  class="sticky top-0 z-50 flex flex-col gap-4 border-b border-gray-100 bg-blue-50 px-8 py-4 shadow-md backdrop-blur-sm transition-all duration-300 md:px-16"
   id="navbar"
 >
   <div class="flex w-full items-center justify-between">
@@ -29,7 +29,7 @@ const navbarLinks = [
         navbarLinks.map((link) => (
           <a
             href={link.href}
-            class="hover:text-brand-700 text-base font-medium text-gray-900 transition-colors"
+            class="text-base font-medium text-gray-900 transition-colors hover:text-blue-700"
           >
             {link.label}
           </a>
@@ -48,14 +48,14 @@ const navbarLinks = [
   <!-- Mobile Menu Panel -->
   <div
     id="mobile-menu"
-    class="bg-brand-50 border-brand-200 hidden w-full border-t md:hidden"
+    class="hidden w-full border-t border-blue-200 bg-blue-50 md:hidden"
   >
     <div class="flex flex-col items-stretch justify-center gap-2">
       {
         navbarLinks.map((link) => (
           <a
             href={link.href}
-            class="text-brand-800 block rounded-md px-3 py-2 text-base font-medium"
+            class="block rounded-md px-3 py-2 text-base font-medium text-blue-800"
           >
             {link.label}
           </a>

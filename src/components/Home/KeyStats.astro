@@ -37,37 +37,37 @@ const stats = [
 
 <section class="z-20 -mt-8 w-full px-6">
   <div class="relative rounded-xl border-b border-gray-100 bg-white shadow-lg">
-    <div class="px-4 py-10 sm:px-6 lg:px-8">
-      <ul
-        id="key-stats-container"
-        class="divide-brand-100 grid grid-cols-2 place-items-stretch gap-8 text-center sm:grid-cols-4 md:grid-cols-6 md:gap-16 md:text-left"
-      >
-        {
-          stats.map((stat) => {
-            const Icon = stat.icon;
-            return (
-              <li
-                data-aos="fade-up"
-                class="col-span-2 flex h-full flex-col px-4"
-              >
-                <div class="mb-4 flex items-center justify-center md:justify-start">
-                  <div class="bg-brand-50 text-brand-700 flex h-12 w-12 items-center justify-center rounded-lg">
-                    <Icon class="h-6 w-6" aria-hidden="true" />
-                  </div>
+    <ul
+      id="key-stats-container"
+      class="grid grid-cols-2 gap-x-8 gap-y-10 px-4 py-10 text-center sm:grid-cols-4 sm:px-6 md:grid-cols-6 md:text-left lg:px-8"
+    >
+      {
+        stats.map((stat) => {
+          const Icon = stat.icon;
+          return (
+            <li data-aos="fade-up" class="col-span-2 flex h-full flex-col">
+              <div class="mb-4 flex items-center justify-center md:justify-start">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
+                  <Icon class="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">{stat.title}</h3>
-                <p class="mt-2 grow text-base leading-relaxed text-gray-600">
-                  {stat.description}
-                </p>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">{stat.title}</h3>
+              <p class="mt-2 grow text-base leading-relaxed text-gray-600">
+                {stat.description}
+              </p>
+            </li>
+          );
+        })
+      }
+    </ul>
   </div>
 
   <style>
+    @media (width >= 40rem /* 640px */) and (width < 47.999rem /* 768px */) {
+      #key-stats-container :nth-child(3n + 5):last-child {
+        grid-column-start: 2;
+      }
+    }
     @media (width >= 48rem /* 768px */) {
       #key-stats-container:has(:nth-child(3n + 5):last-child)
         > :nth-last-child(2) {
