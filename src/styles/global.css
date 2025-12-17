@@ -6,10 +6,6 @@
   html {
     scroll-behavior: smooth;
   }
-  html,
-  body {
-    @apply font-urbanist m-0 p-0;
-  }
 }
 
 @theme {
