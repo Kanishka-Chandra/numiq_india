@@ -24,20 +24,21 @@ const values = [
 ---
 
 <section
-  class="space-y-20 bg-[#0b0c15] px-8 py-20 md:px-16 md:py-32"
+  class="space-y-10 bg-white px-8 py-10 md:space-y-20 md:px-16 md:py-20"
   id="why-choose-us"
 >
-  <div class="flex max-w-2xl flex-col items-start justify-between gap-6">
+  <div class="flex max-w-2xl flex-col items-start justify-between">
     <span
-      class="mb-3 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-bold tracking-wider text-blue-400 uppercase"
+      class="mb-12 rounded-full border border-blue-600/20 bg-blue-50 px-3 py-1 text-xs font-bold tracking-wider text-blue-700 uppercase"
     >
       Why Partner With Us
     </span>
-    <h2 class="text-4xl font-bold text-white md:text-5xl">
-      The Numiq Advantage
+    <h2 class="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
+      The
+      <span class="text-blue-600">Numiq</span> Advantage
     </h2>
-    <p class="text-lg leading-relaxed text-slate-400">
-      In today’s financial landscape, you need more than a service provider -
+    <p class="text-lg leading-relaxed text-gray-600">
+      In today's financial landscape, you need more than a service provider -
       you need a strategic finance partner. Numiq brings clarity, stability, and
       a competitive edge across a full spectrum of finance, accounting and
       analytics services.
@@ -52,13 +53,22 @@ const values = [
           <div
             data-aos="fade-up"
             data-aos-delay={`${index * 300}`}
-            class="group rounded-2xl border border-white/5 bg-[#1a1b26] p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-900/10"
+            class="group relative overflow-hidden rounded-2xl border border-blue-100 bg-blue-50 p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-900/10"
           >
-            <div class="mb-8 flex size-16 items-center justify-center rounded-2xl bg-blue-500/10 text-3xl text-blue-400 shadow-inner transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white">
+            <div
+              class="absolute inset-0 -z-10 opacity-50"
+              style={{
+                background: "var(--color-blue-100)",
+                backgroundImage:
+                  "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)",
+                backgroundSize: "20px 20px",
+              }}
+            />
+            <div class="mb-8 flex size-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl text-gray-600 shadow-inner transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-blue-50">
               <Icon />
             </div>
-            <h3 class="mb-4 text-2xl font-bold text-white">{value.title}</h3>
-            <p class="leading-relaxed text-slate-400">{value.description}</p>
+            <h3 class="mb-4 text-2xl font-bold text-gray-900">{value.title}</h3>
+            <p class="leading-relaxed text-gray-600">{value.description}</p>
           </div>
         );
       })

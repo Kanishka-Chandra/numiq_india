@@ -1,19 +1,24 @@
 <section
-  class="cta-section relative overflow-hidden px-8 py-20 md:px-16 md:py-32"
+  class="relative overflow-hidden px-8 py-10 before:absolute before:inset-0 before:-z-5 before:bg-linear-to-br before:from-blue-900 before:to-blue-600 before:opacity-80 before:mix-blend-normal md:px-16 md:py-20"
 >
   <!-- Background Image with Overlay -->
   <img
     src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
     alt="Corporate office professional setting"
-    class="absolute inset-0 -z-10 size-full object-cover opacity-20 grayscale"
+    class="absolute inset-0 -z-10 size-full object-cover"
   />
 
   <div class="relative z-10 mx-auto max-w-7xl px-4 text-center">
-    <h2 class="mb-6 text-4xl leading-tight font-bold text-white md:text-5xl">
-      Partner with Precision. <br />
-      <span class="text-blue-400">Growth with Confidence.</span>
+    <h2 class="mb-6 text-4xl leading-tight font-bold text-blue-50 md:text-5xl">
+      Partner with
+      <span class="text-blue-200">Precision. </span>
+      <br />
+      Growth with
+      <span class="text-blue-200">Confidence.</span>
     </h2>
-    <p class="mx-auto mb-10 max-w-5xl text-xl leading-relaxed text-slate-300">
+    <p
+      class="mx-auto mb-10 max-w-5xl text-base leading-relaxed text-blue-50 md:text-xl"
+    >
       We work seamlessly across industries, supporting both lean teams and large
       corporates with a dedicated three-tier delivery model that brings deep,
       specialized expertise across the entire value chain—delivering
@@ -23,29 +28,16 @@
     <div class="flex flex-col justify-center gap-4 sm:flex-row">
       <a
         href="/contact"
-        class="rounded-full bg-blue-600 px-10 py-4 font-bold text-white shadow-lg transition-all hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/20"
+        class="rounded-full bg-blue-50 px-10 py-4 font-bold text-blue-700 shadow-lg transition-all hover:bg-blue-50 hover:shadow-xl hover:shadow-black/20"
       >
         Schedule a Discussion
       </a>
       <a
         href="/services"
-        class="rounded-full border border-white/20 bg-white/5 px-10 py-4 font-bold text-white transition-all hover:bg-white/10"
+        class="rounded-full border border-blue-50/30 bg-blue-50/10 px-10 py-4 font-bold text-blue-50 transition-all hover:bg-blue-50/20"
       >
         View Services
       </a>
     </div>
   </div>
 </section>
-
-<style>
-  .cta-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -5;
-    background: linear-gradient(135deg, #0b0c15 0%, #1e3a8a 100%);
-    opacity: 0.9;
-    mix-blend-mode: multiply;
-    pointer-events: none;
-  }
-</style>
