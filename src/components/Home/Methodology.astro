@@ -40,44 +40,56 @@ const steps = [
 ---
 
 <section
-  class="relative space-y-20 overflow-hidden bg-blue-50/50 px-8 py-10 before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] before:bg-size-[40px_40px] before:opacity-30 after:absolute after:inset-0 after:-z-20 after:bg-[url('https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] after:bg-cover after:bg-center after:opacity-7 after:grayscale md:px-16 md:py-20"
+  class="relative space-y-20 overflow-hidden bg-[#11121c] px-8 py-20 before:absolute before:inset-0 before:-z-10 before:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] before:bg-size-[40px_40px] before:opacity-20 md:px-16 md:py-32"
   id="methodology"
 >
-  <div class="flex max-w-2xl flex-col items-start justify-between gap-6">
-    <span class="mb-3 text-sm font-bold tracking-wider text-blue-700 uppercase">
+  <!-- Background Glow -->
+  <div
+    class="pointer-events-none absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-blue-600/5 blur-[120px]"
+  >
+  </div>
+
+  <div
+    class="relative z-10 flex max-w-2xl flex-col items-start justify-between gap-6"
+  >
+    <span
+      class="mb-3 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-bold tracking-wider text-blue-400 uppercase"
+    >
       Our Methodology
     </span>
-    <h2 class="text-3xl font-bold text-gray-900">
+    <h2 class="text-3xl font-bold text-white md:text-5xl">
       The Numiq Standard of Delivery
     </h2>
-    <p class="text-lg text-gray-600">
+    <p class="text-lg text-slate-400">
       A rigorous, four-step methodology designed to ensure precision, maximize
       value, and mitigate risk for every client engagement.
     </p>
   </div>
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+  <div
+    class="relative z-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"
+  >
     {
       steps.map((step, index) => {
         const Icon = step.icon;
         return (
           <div
             data-aos="fade-up"
-            data-aos-delay={`${index * 400}`}
-            class="group hover-card relative rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+            data-aos-delay={`${index * 200}`}
+            class="group hover-card relative rounded-2xl border border-white/5 bg-[#1a1b26] p-8 shadow-sm transition-all duration-300 hover:border-blue-500/30 hover:bg-[#1f202e]"
           >
             <div class="flex items-start justify-between">
-              <div class="flex size-14 items-center justify-center rounded-lg bg-blue-100 text-2xl text-blue-700">
+              <div class="flex size-14 items-center justify-center rounded-xl bg-blue-500/10 text-2xl text-blue-400 transition-colors duration-300 group-hover:bg-blue-500 group-hover:text-white">
                 <Icon />
               </div>
-              <div class="text-5xl font-bold text-gray-100 transition-colors select-none group-hover:text-blue-50">
+              <div class="text-5xl font-bold text-white/5 transition-colors select-none group-hover:text-white/10">
                 {step.number}
               </div>
             </div>
 
-            <h3 class="mt-6 mb-2 text-xl font-bold text-gray-900">
+            <h3 class="mt-8 mb-4 text-xl font-bold text-white transition-colors group-hover:text-blue-400">
               {step.title}
             </h3>
-            <p class="leading-relaxed text-gray-600">{step.text}</p>
+            <p class="leading-relaxed text-slate-400">{step.text}</p>
           </div>
         );
       })
@@ -86,20 +98,8 @@ const steps = [
 </section>
 
 <style>
-  .bg-grid-pattern {
-    background-image:
-      linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-      linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  .hover-card {
-    transition: all 0.3s ease;
-  }
   .hover-card:hover {
-    box-shadow:
-      0 10px 25px -5px rgba(0, 0, 0, 0.1),
-      0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.15);
     transform: translateY(-4px);
   }
 </style>

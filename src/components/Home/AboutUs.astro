@@ -4,18 +4,23 @@ import { Handshake } from "@lucide/astro";
 
 <section
   id="about"
-  class="relative overflow-hidden bg-white px-8 py-10 before:pointer-events-none before:absolute before:inset-0 before:z-10 before:bg-linear-to-b before:from-transparent before:to-white before:opacity-100 md:px-16 md:py-20"
+  class="relative overflow-hidden bg-[#0b0c15] px-8 py-20 before:pointer-events-none before:absolute before:inset-0 before:z-10 before:bg-gradient-to-b before:from-[#0b0c15] before:via-transparent before:to-[#0b0c15] before:opacity-100 md:px-16 md:py-32"
 >
+  <!-- Subtle background glow -->
+  <div
+    class="pointer-events-none absolute top-1/2 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-900/10 blur-[100px]"
+  >
+  </div>
   <!-- Subtle background image -->
   <img
     src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     alt="Abstract money background"
-    class="pointer-events-none absolute inset-0 size-full object-cover opacity-5 grayscale"
+    class="pointer-events-none absolute inset-0 size-full object-cover opacity-2 grayscale"
   />
 
-  <div class="relative z-10">
+  <div class="relative z-10 mx-auto max-w-7xl">
     <div
-      class="grid grid-cols-1 place-items-stretch gap-10 md:grid-cols-2 md:gap-16"
+      class="grid grid-cols-1 place-items-center gap-10 md:grid-cols-2 md:gap-20"
     >
       <!-- Content -->
       <div
@@ -23,15 +28,15 @@ import { Handshake } from "@lucide/astro";
         class="flex flex-col items-start justify-between gap-6"
       >
         <span
-          class="mb-3 text-sm font-bold tracking-wider text-blue-700 uppercase"
+          class="mb-3 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-bold tracking-wider text-blue-400 uppercase"
         >
           Who We Are
         </span>
-        <h2 class="text-3xl font-bold text-gray-900">
+        <h2 class="text-3xl font-bold text-white md:text-5xl">
           Financial Help for
-          <span class="text-blue-700">Today's World</span>
+          <span class="text-blue-400">Today's World</span>
         </h2>
-        <div class="space-y-3 text-lg text-gray-600">
+        <div class="space-y-4 text-lg leading-relaxed text-slate-400">
           <p>
             At Numiq, we keep things simple. We know that managing money can be
             complicated, so we are here to handle the details for you. We
@@ -54,22 +59,33 @@ import { Handshake } from "@lucide/astro";
       <!-- Image -->
       <div
         data-aos="fade-left"
-        class="relative aspect-4/3 w-full overflow-hidden rounded-lg bg-gray-100 shadow-lg after:absolute after:inset-0 after:z-10 after:bg-blue-900/10"
+        class="relative aspect-4/3 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#1a1b26] shadow-2xl"
       >
         <img
           src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           alt="Professional team in a modern office meeting"
-          class="size-full object-cover transition-transform duration-500"
+          class="size-full object-cover opacity-80 transition-transform duration-500 hover:scale-105"
         />
         <div
-          class="absolute inset-x-8 bottom-4 z-20 flex items-center gap-2 rounded border border-white/50 bg-white/95 p-4 shadow-sm backdrop-blur md:bottom-8 md:p-6"
+          class="absolute inset-0 bg-gradient-to-t from-[#0b0c15] via-transparent to-transparent opacity-60"
         >
-          <Handshake class="size-8 text-blue-700" />
+        </div>
+
+        <div
+          class="absolute inset-x-6 bottom-6 z-20 flex items-center gap-4 rounded-xl border border-white/10 bg-[#1a1b26]/90 p-5 shadow-xl backdrop-blur-md md:inset-x-8 md:bottom-8"
+        >
+          <div
+            class="flex size-12 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400"
+          >
+            <Handshake class="size-6" />
+          </div>
           <div class="flex flex-col">
-            <p class="text-base font-bold text-gray-900 md:text-lg">
+            <p class="text-base font-bold text-white md:text-lg">
               Your Trusted Partners
             </p>
-            <p class="text-xs text-gray-500 md:text-sm">Helping you succeed.</p>
+            <p class="text-xs text-slate-400 md:text-sm">
+              Helping you succeed.
+            </p>
           </div>
         </div>
       </div>

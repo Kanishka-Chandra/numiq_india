@@ -1,6 +1,6 @@
 <section
   id="home"
-  class="hero-section relative overflow-hidden px-8 py-10 md:px-16 md:py-20 portrait:h-svh landscape:min-h-[85svh]"
+  class="hero-section relative max-h-svh overflow-hidden px-8 py-10 md:px-16 md:py-20 portrait:h-svh landscape:min-h-[85svh]"
 >
   <!-- Background Image -->
   <img
@@ -10,30 +10,53 @@
   />
 
   <div class="relative z-10 mx-auto max-w-7xl">
-    <div class="max-w-3xl">
+    <!-- Content -->
+    <div class="max-w-2xl">
       <div
         data-aos="fade-right"
-        class="mb-6 inline-flex items-center rounded-full border border-blue-700/30 bg-blue-800/20 px-3 py-1 text-xs font-semibold tracking-wide text-blue-100 uppercase backdrop-blur-sm"
+        class="mb-6 inline-flex items-center rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-xs font-bold tracking-wide text-blue-300 uppercase backdrop-blur-sm"
       >
         Your Financial Partner
       </div>
       <h1
         data-aos="fade-right"
         data-aos-delay="100"
-        class="mb-6 text-4xl leading-[1.1] font-bold tracking-tight text-balance text-white md:text-6xl"
+        class="mb-6 text-5xl leading-[1.1] font-bold tracking-tight text-balance text-white md:text-6xl"
       >
         Make Smarter Decisions with
-        <span class="text-blue-200">Your Money</span>.
+        <span
+          class="bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
+          >Your Money</span
+        >.
       </h1>
       <p
         data-aos="fade-right"
         data-aos-delay="200"
-        class="mb-10 max-w-2xl text-lg leading-relaxed text-balance text-blue-50 md:text-xl"
+        class="mb-10 max-w-lg text-lg leading-relaxed text-balance text-slate-400 md:text-xl"
       >
         We deliver bespoke investment diligence, research, valuations, and
         accounting support—powered by advanced data analytics and AI—to turn
         complex information into confident action.
       </p>
+
+      <div
+        data-aos="fade-right"
+        data-aos-delay="300"
+        class="flex flex-wrap gap-4"
+      >
+        <a
+          href="#contact"
+          class="rounded-full bg-blue-600 px-8 py-3.5 font-semibold text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/25"
+        >
+          Get Started
+        </a>
+        <a
+          href="#services"
+          class="rounded-full border border-white/10 bg-white/5 px-8 py-3.5 font-semibold text-white transition-all hover:bg-white/10"
+        >
+          Our Services
+        </a>
+      </div>
     </div>
   </div>
 </section>
