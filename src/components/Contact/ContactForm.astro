@@ -21,7 +21,8 @@ import { ChevronDown } from "@lucide/astro";
       name="contact"
       method="POST"
       data-netlify="true"
-      onsubmit="event?.preventDefault(); alert('Thank you. Your message has been sent to Numiq.');"
+      action="/contact"
+      onsubmit="alert('Thank you. Your message has been sent to Numiq.');"
       class="space-y-6"
     >
       <div>
@@ -31,6 +32,7 @@ import { ChevronDown } from "@lucide/astro";
         <input
           type="text"
           id="name"
+          name="name"
           required
           class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-gray-900 transition-colors focus:border-blue-600 focus:ring focus:ring-blue-600 focus:outline-none"
           placeholder="John Doe"
@@ -44,6 +46,7 @@ import { ChevronDown } from "@lucide/astro";
         <input
           type="email"
           id="email"
+          name="email"
           required
           class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-gray-900 transition-colors focus:border-blue-600 focus:ring focus:ring-blue-600 focus:outline-none"
           placeholder="john@company.com"
@@ -60,23 +63,19 @@ import { ChevronDown } from "@lucide/astro";
         <div class="relative">
           <select
             id="service"
-            class="w-full appearance-none rounded-lg border border-blue-200 bg-white px-4 py-3 text-gray-900 transition-colors focus:border-blue-600 focus:ring focus:ring-blue-600 focus:outline-none"
+            name="service"
+            required
+            class="w-full appearance-none rounded-lg border border-blue-200 bg-white px-4 py-3 text-gray-900 focus:border-blue-600 focus:ring focus:ring-blue-600 focus:outline-none"
           >
-            <option value="" disabled selected class="text-blue-400"
-              >Select a service...</option
-            >
+            <option value="">Select a service...</option>
             <option value="tia-support"
               >Transaction & Investment Analysis Support</option
             >
-            <option value="dashboarding-reporting"
-              >Dashboarding, Reporting & Business Intelligence</option
-            >
+            <option value="dashboarding-reporting">Dashboarding & BI</option>
             <option value="accounting-bookkeeping"
-              >Accounting & Bookkeeping Support</option
+              >Accounting & Bookkeeping</option
             >
-            <option value="fpa-support"
-              >Financial Planning & Analysis (FP&A)</option
-            >
+            <option value="fpa-support">FP&A</option>
             <option value="other">Other / General Inquiry</option>
           </select>
 
@@ -97,6 +96,7 @@ import { ChevronDown } from "@lucide/astro";
         </label>
         <textarea
           id="message"
+          name="message"
           rows="10"
           class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-gray-900 transition-colors focus:border-blue-600 focus:ring focus:ring-blue-600 focus:outline-none"
           placeholder="Please describe your specific requirements or challenges..."
