@@ -55,7 +55,7 @@ const services = [
 >
   <!-- Background -->
   <div
-    class="pointer-events-none absolute inset-0 z-0"
+    class="pointer-events-none absolute inset-0 z-0 opacity-80"
     style={{
       backgroundImage: `
         repeating-linear-gradient(22.5deg, transparent, transparent 2px, rgba(75, 85, 99, 0.06) 2px, rgba(75, 85, 99, 0.06) 3px, transparent 3px, transparent 8px),
@@ -75,18 +75,25 @@ const services = [
     <h2 class="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
       <span class="text-blue-600">Services</span> We Offer
     </h2>
-    <p class="text-lg text-gray-600">
-    Numiq's team-as-a-service model continually refines workflows, strengthen reporting
-    structures, and enhance analytical depth - ensuring long-term efficiency and seamless
-    collaboration with your in-house teams.
-    <br />
-    Our expertise lies in addressing the human resource challenges faced by clients
-    by providing highly skilled professionals to support across the value chain. In
-    short, our goal is to deliver value-add services for our clients and enable them
-    to focus on their core competencies. Our uniquely layered team structure provides
-    dedicated points of contact for daily operations as well as strategic discussions,
-    ensuring proper quality control and service excellence.
-    </p>
+    <div class="space-y-2 text-lg text-gray-600">
+      <p>
+        Numiq's team-as-a-service model continually refines workflows,
+        strengthen reporting structures, and enhance analytical depth - ensuring
+        long-term efficiency and seamless collaboration with your in-house
+        teams.
+      </p>
+      <p>
+        Our expertise lies in addressing the human resource challenges faced by
+        clients by providing highly skilled professionals to support across the
+        value chain. In short, our goal is to deliver value-add services for our
+        clients and enable them to focus on their core competencies.
+      </p>
+      <p>
+        Our uniquely layered team structure provides dedicated points of contact
+        for daily operations as well as strategic discussions, ensuring proper
+        quality control and service excellence.
+      </p>
+    </div>
   </div>
   <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
     {
@@ -103,7 +110,7 @@ const services = [
             <div class="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-blue-50 blur-[50px] transition-all group-hover:bg-blue-100/50" />
 
             <div
-              class="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-2xl text-gray-600 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-blue-50"
+              class="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-white text-2xl text-gray-600 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-gray-50"
               aria-hidden="true"
             >
               <Icon class="size-7" aria-hidden="true" />
