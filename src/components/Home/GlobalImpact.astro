@@ -20,15 +20,15 @@ const stats = [
 ---
 
 <section
-  class="relative overflow-hidden bg-teal-50 px-8 py-10 text-gray-900 md:px-16 md:py-20"
+  class="relative overflow-hidden bg-gray-950 px-8 py-10 text-gray-100 md:px-16 md:py-20"
   id="global-impact"
 >
   <div
-    class="pointer-events-none absolute inset-0 z-0 opacity-40"
+    class="pointer-events-none absolute inset-0 z-0 opacity-50"
     style={{
       backgroundImage: `
-          repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px),
-        repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px)
+          repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 20px)
         `,
       backgroundSize: "40px 40px",
     }}
@@ -37,18 +37,18 @@ const stats = [
   <div class="grid grid-cols-1 place-content-center gap-16 md:grid-cols-2">
     <div data-aos="fade-right" class="flex flex-col">
       <span
-        class="mb-12 w-fit rounded-full border border-teal-600/20 bg-white px-3 py-1 text-xs font-bold tracking-wider text-teal-700 uppercase"
+        class="mb-12 w-fit rounded-full border border-teal-600/20 bg-teal-900/30 px-3 py-1 text-xs font-bold tracking-wider text-teal-400 uppercase"
       >
         Global Impact
       </span>
       <h2
-        class="mb-6 text-3xl leading-tight font-bold text-gray-900 md:text-5xl"
+        class="mb-6 text-3xl leading-tight font-bold text-gray-100 md:text-5xl"
       >
-        <span class="text-teal-600">Precision</span> in Every Number.
+        <span class="text-teal-400">Precision</span> in Every Number.
         <br />
         Scale in Every Action.
       </h2>
-      <p class="text-lg leading-relaxed text-gray-600">
+      <p class="text-lg leading-relaxed text-gray-400">
         Our analytical rigor translates directly into tangible business results.
         We manage financial complexity through data, ensuring that every
         strategic decision is backed by empirical evidence and aligned with
@@ -59,12 +59,12 @@ const stats = [
     <div data-aos="fade-left" class="grid grid-cols-2 gap-6">
       {
         stats.map((stat) => (
-          <div class="group space-y-2 rounded-2xl border border-teal-200 bg-white p-6 shadow-sm transition-all hover:border-teal-500/30 hover:shadow-lg hover:shadow-teal-900/10 md:p-8">
-            <div class="text-4xl font-bold text-gray-900 transition-transform group-hover:scale-105">
+          <div class="group space-y-2 rounded-2xl border border-teal-900/30 bg-gray-900 p-6 shadow-sm transition-all hover:border-teal-500/30 hover:shadow-lg hover:shadow-teal-900/10 md:p-8">
+            <div class="text-4xl font-bold text-gray-100 transition-transform group-hover:scale-105">
               {stat.value}
             </div>
 
-            <div class="text-sm font-bold tracking-wide text-teal-500 uppercase transition-colors group-hover:text-teal-700">
+            <div class="text-sm font-bold tracking-wide text-teal-500 uppercase transition-colors group-hover:text-teal-400">
               {stat.label}
             </div>
           </div>

@@ -1,90 +1,65 @@
 ---
-import { Handshake } from "@lucide/astro";
+
 ---
 
 <section
   id="about"
-  class="relative overflow-hidden bg-white px-8 py-10 md:px-16 md:py-20"
+  class="relative isolate overflow-hidden bg-gray-950 px-8 py-10 md:px-16 md:py-20"
 >
-  <!-- Subtle background decoration -->
-  <div
-    class="pointer-events-none absolute top-1/2 left-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-50 blur-[100px]"
-  >
-  </div>
-  <!-- Subtle background image -->
+  <!-- LAYER 1: Background image -->
   <img
-    src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"
     alt="Abstract money background"
-    class="pointer-events-none absolute inset-0 size-full object-cover opacity-5"
+    class="pointer-events-none absolute inset-0 -z-30 size-full object-cover opacity-2"
   />
 
+  <!-- LAYER 2: Fade overlay (towards bottom-right) -->
+  <div
+    class="pointer-events-none absolute inset-0 -z-20 bg-linear-to-br from-transparent to-gray-950/80"
+  >
+  </div>
+
+  <!-- LAYER 3: Teal glow overlay -->
+  <div
+    class="pointer-events-none absolute top-1/2 left-0 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-900/40 blur-[120px]"
+  >
+  </div>
+
+  <!-- LAYER 4: Content -->
   <div class="relative z-10">
     <div
-      class="grid grid-cols-1 place-items-stretch gap-10 md:grid-cols-2 md:gap-20"
+      data-aos="fade-right"
+      class="flex max-w-4xl flex-col items-start justify-between gap-6"
     >
-      <!-- Content -->
-      <div
-        data-aos="fade-right"
-        class="flex flex-col items-start justify-between gap-6"
+      <span
+        class="mb-3 rounded-full border border-teal-400/20 bg-teal-900 px-3 py-1 text-xs font-bold tracking-wider text-teal-300 uppercase"
       >
-        <span
-          class="mb-3 rounded-full border border-teal-600/20 bg-teal-50 px-3 py-1 text-xs font-bold tracking-wider text-teal-700 uppercase"
-        >
-          Who We Are
-        </span>
-        <h2 class="text-3xl font-bold text-gray-900 md:text-5xl">
-          Redefining Financial Leadership for the <br />
-          <span class="text-teal-600">Modern Era</span>
-        </h2>
-        <div class="space-y-4 text-lg leading-relaxed text-gray-600">
-          <p>
-            At Numiq, we believe that true financial success lies in the
-            details. Established to serve the evolving, complex needs of Indian
-            and global enterprises, we provide a comprehensive suite of
-            financial services characterized by unyielding integrity, continuous
-            innovation, and strategic intelligence.
-          </p>
-          <p>
-            Our team comprises seasoned chartered accountants, financial
-            analysts, and strategy consultants dedicated to simplifying complex
-            financial landscapes. From foundational bookkeeping and compliance
-            to high-level analytical support and M&A transaction support, Numiq
-            stands as a proactive partner in your journey toward sustainable,
-            long-term growth.
-          </p>
-          <p>
-            We don't just report on the past; we analyze it to illuminate the
-            future.
-          </p>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div
-        data-aos="fade-left"
-        class="relative aspect-4/3 w-full overflow-hidden rounded-2xl border border-teal-100 shadow-2xl shadow-teal-900/20"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          alt="Professional team in a modern office meeting"
-          class="size-full object-cover transition-transform duration-500"
-        />
-
-        <div
-          class="absolute inset-x-6 bottom-6 z-20 flex items-center gap-4 rounded-xl border border-teal-50 bg-white p-2 shadow-xl md:inset-x-8 md:bottom-8 md:p-4"
-        >
-          <div
-            class="flex size-12 items-center justify-center rounded-lg bg-teal-600/10 text-teal-600"
-          >
-            <Handshake class="size-6" />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-base font-bold text-gray-900 md:text-lg">
-              Your Trusted Partners
-            </p>
-            <p class="text-xs text-teal-600 md:text-sm">Helping you succeed.</p>
-          </div>
-        </div>
+        Who We Are
+      </span>
+      <h2 class="text-3xl font-bold text-gray-200 md:text-5xl">
+        Redefining Financial Leadership for the <br />
+        <span class="text-teal-300">Modern Era</span>
+      </h2>
+      <div class="space-y-4 text-lg leading-relaxed text-gray-400">
+        <p>
+          At Numiq, we believe that true financial success lies in the details.
+          Established to serve the evolving, complex needs of Indian and global
+          enterprises, we provide a comprehensive suite of financial services
+          characterized by unyielding integrity, continuous innovation, and
+          strategic intelligence.
+        </p>
+        <p>
+          Our team comprises seasoned chartered accountants, financial analysts,
+          and strategy consultants dedicated to simplifying complex financial
+          landscapes. From foundational bookkeeping and compliance to high-level
+          analytical support and M&A transaction support, Numiq stands as a
+          proactive partner in your journey toward sustainable, long-term
+          growth.
+        </p>
+        <p>
+          We don't just report on the past; we analyze it to illuminate the
+          future.
+        </p>
       </div>
     </div>
   </div>
