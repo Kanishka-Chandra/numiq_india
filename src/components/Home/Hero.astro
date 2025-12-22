@@ -1,15 +1,26 @@
 <section
   id="home"
-  class="relative max-h-fit overflow-hidden px-8 pt-20 pb-10 before:absolute before:inset-0 before:-z-5 before:bg-linear-to-br before:from-gray-900/90 before:to-teal-700/80 before:mix-blend-multiply md:px-16 md:pt-32 md:pb-20 portrait:min-h-svh landscape:min-h-[85svh]"
+  class="relative overflow-hidden px-8 pt-20 pb-10 md:px-16 md:pt-32 md:pb-20 portrait:min-h-svh landscape:min-h-[85svh]"
 >
-  <!-- Background Image -->
+  <!-- LAYER 1: Solid base background -->
+  <div class="absolute inset-0 -z-40 bg-gray-950"></div>
+
+  <!-- LAYER 2: Transparent PNG image -->
   <img
-    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    src="/hero-bg.png"
     alt="Modern financial district skyscrapers"
-    class="absolute inset-0 -z-10 size-full object-cover opacity-90"
+    class="absolute inset-0 -z-30 size-full object-cover opacity-70"
   />
 
-  <!-- Content -->
+  <!-- LAYER 3: Opacity overlay -->
+  <div class="absolute inset-0 -z-20 bg-gray-950/60"></div>
+  <!-- LAYER 4: Gradient overlay -->
+  <div
+    class="absolute inset-0 -z-10 bg-linear-to-bl from-teal-900/50 via-gray-950/50 to-gray-950/50 mix-blend-normal"
+  >
+  </div>
+
+  <!-- LAYER 5: Content -->
   <div class="relative z-10 max-w-2xl">
     <span
       data-aos="fade-right"
@@ -32,7 +43,7 @@
     <p
       data-aos="fade-right"
       data-aos-delay="200"
-      class="mb-10 max-w-2xl text-base leading-relaxed text-balance text-slate-200 md:text-xl"
+      class="mb-10 max-w-2xl text-base leading-relaxed text-balance text-gray-200 text-shadow-white/70 text-shadow-xs md:text-xl"
     >
       We deliver bespoke investment diligence, research, valuations, and
       accounting support powered by advanced data analytics and AI to turn
