@@ -4,7 +4,7 @@ import { ShieldCheck, TrendingUp } from "@lucide/astro";
 
 <section id="about" class="relative bg-white">
   <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2">
-    <div>
+    <div data-aos="fade-right">
       <h2
         class="mb-6 font-serif text-3xl leading-tight text-slate-900 md:text-5xl"
       >
@@ -26,7 +26,7 @@ import { ShieldCheck, TrendingUp } from "@lucide/astro";
         illuminate the future.
       </p>
 
-      <div class="flex gap-4">
+      <div class="flex flex-wrap gap-4">
         <div class="flex items-center gap-3">
           <div class="rounded-full border border-slate-200 bg-slate-100 p-2">
             <ShieldCheck class="text-brand-teal h-5 w-5" />
@@ -48,18 +48,17 @@ import { ShieldCheck, TrendingUp } from "@lucide/astro";
       </div>
     </div>
 
-    <div class="relative">
+    <div class="relative" data-aos="fade-left">
       <div class="border-brand-teal/20 absolute -inset-4 z-0 rounded-sm border">
       </div>
       <div
-        class="group relative z-10 h-[500px] w-full overflow-hidden rounded-sm bg-slate-100 shadow-2xl before:absolute before:inset-0 before:z-10 before:bg-linear-to-b before:from-transparent before:via-transparent before:to-black"
+        class="group relative z-10 aspect-square w-full overflow-hidden rounded-sm bg-slate-100 shadow-2xl before:absolute before:inset-0 before:z-10 before:bg-linear-to-b before:from-transparent before:via-transparent before:to-black"
       >
         <img
           src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80"
           alt="Meeting"
           class="z-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
         />
-        <!-- Kept dark linear at bottom for text legibility -->
         <div class="absolute bottom-0 left-0 z-20 w-full p-8">
           <p class="text-brand-teal font-serif text-xl italic brightness-125">
             "Scale in every action."

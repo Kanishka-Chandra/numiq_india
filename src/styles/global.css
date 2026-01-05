@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply overflow-x-hidden overflow-y-auto;
   }
   body > * {
     @apply mx-auto max-w-400;

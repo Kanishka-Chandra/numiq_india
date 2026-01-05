@@ -31,7 +31,7 @@ const services = [
 
 <section id="services" class="bg-slate-50">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="mb-16 text-center">
+    <div class="mb-16 text-center" data-aos="fade-up">
       <span
         class="text-brand-teal mb-3 block text-xs font-bold tracking-[0.2em] uppercase"
       >
@@ -48,8 +48,12 @@ const services = [
 
     <div class="grid gap-8 md:grid-cols-2">
       {
-        services.map(({ title, description, Icon }) => (
-          <div class="group hover:border-brand-teal/50 relative overflow-hidden rounded-sm border border-slate-200 bg-white p-8 transition-all duration-300 hover:shadow-xl md:p-10">
+        services.map(({ title, description, Icon }, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            class="group hover:border-brand-teal/50 relative overflow-hidden rounded-sm border border-slate-200 bg-white p-8 transition-all duration-300 hover:shadow-xl md:p-10"
+          >
             {/* Background Icon */}
             <div class="text-brand-teal absolute top-0 right-0 p-6 opacity-5 transition-all duration-300 group-hover:opacity-10">
               <Icon class="h-16 w-16" />

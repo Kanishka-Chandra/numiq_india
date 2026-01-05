@@ -26,11 +26,14 @@ const steps = [
 <section id="methodology" class="border-y border-slate-200 bg-white">
   <div class="mx-auto max-w-7xl px-6">
     <div class="mb-16 grid gap-16 md:grid-cols-2">
-      <h2 class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl">
+      <h2
+        data-aos="fade-right"
+        class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl"
+      >
         The Numiq <br />
         Standard of Delivery
       </h2>
-      <p class="text-lg text-slate-600">
+      <p data-aos="fade-left" class="text-lg text-slate-600">
         A rigorous, four-step methodology designed to ensure precision, maximize
         value, and mitigate risk for every client engagement.
       </p>
@@ -38,8 +41,12 @@ const steps = [
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
       {
-        steps.map(({ number, title, description }) => (
-          <div class="hover:border-brand-teal group relative border-t border-slate-300 pt-8 transition-colors duration-300">
+        steps.map(({ number, title, description }, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            class="hover:border-brand-teal group relative border-t border-slate-300 pt-8 transition-colors duration-300"
+          >
             <div class="group-hover:text-brand-teal mb-4 font-serif text-4xl text-slate-200 transition-colors">
               {number}
             </div>

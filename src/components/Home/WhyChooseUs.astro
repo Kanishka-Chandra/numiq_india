@@ -21,6 +21,7 @@ const reasons = [
   <div class="mx-auto max-w-7xl px-6">
     {/* Used dark navy block here to provide contrast anchor */}
     <div
+      data-aos="fade-up"
       class="bg-brand-deep relative overflow-hidden rounded-sm p-8 shadow-2xl md:p-16"
     >
       <div
@@ -29,7 +30,7 @@ const reasons = [
       </div>
 
       <div class="grid items-center gap-12 md:grid-cols-2">
-        <div>
+        <div data-aos="fade-right" data-aos-delay="200">
           <h2 class="mb-6 font-serif text-4xl text-white">
             Why Partner With Us?
           </h2>
@@ -48,8 +49,12 @@ const reasons = [
 
         <div class="space-y-8">
           {
-            reasons.map(({ title, description }) => (
-              <div class="flex gap-4">
+            reasons.map(({ title, description }, index) => (
+              <div
+                class="flex gap-4"
+                data-aos="fade-left"
+                data-aos-delay={index * 100 + 300}
+              >
                 <div class="mt-1">
                   <CheckCircle2 class="text-brand-teal h-6 w-6" />
                 </div>

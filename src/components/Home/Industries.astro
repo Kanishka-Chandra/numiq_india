@@ -29,7 +29,7 @@ const industries = [
   </div>
 
   <div class="relative z-10 mx-auto max-w-7xl px-6">
-    <div class="mb-16 text-center">
+    <div class="mb-16 text-center" data-aos="fade-down">
       <h2 class="mb-4 font-serif text-4xl text-slate-900">
         Expertise for Every Industry
       </h2>
@@ -38,10 +38,14 @@ const industries = [
       </p>
     </div>
 
-    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
       {
-        industries.map(({ title, Icon }) => (
-          <div class="hover:border-brand-teal group flex aspect-square flex-col items-center justify-center rounded-sm border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:shadow-lg">
+        industries.map(({ title, Icon }, index) => (
+          <div
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
+            class="hover:border-brand-teal group flex aspect-square flex-col items-center justify-center rounded-sm border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:shadow-lg"
+          >
             <div class="text-brand-teal mb-4 transition-transform duration-300 group-hover:scale-110">
               <Icon class="h-9 w-9" />
             </div>

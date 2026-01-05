@@ -23,17 +23,23 @@ const impactStats = [
 
   <div class="relative z-10 mx-auto max-w-7xl px-6 text-center">
     <span
+      data-aos="zoom-in"
       class="border-brand-tealLight/30 text-brand-tealLight mb-8 inline-block rounded-full border bg-white/5 px-3 py-1 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm"
     >
       Global Impact
     </span>
 
-    <h2 class="mb-8 font-serif text-4xl leading-tight text-white md:text-6xl">
+    <h2
+      data-aos="fade-up"
+      class="mb-8 font-serif text-4xl leading-tight text-white md:text-6xl"
+    >
       Precision in Every Number. <br />
       <span class="text-brand-tealLight italic">Scale in Every Action.</span>
     </h2>
 
     <p
+      data-aos="fade-up"
+      data-aos-delay="200"
       class="mx-auto mb-12 max-w-3xl text-xl leading-relaxed font-light text-slate-300"
     >
       Our analytical rigor translates directly into tangible business results.
@@ -46,8 +52,8 @@ const impactStats = [
       class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 border-t border-white/10 pt-12 text-left md:grid-cols-3"
     >
       {
-        impactStats.map(({ value, title, description }) => (
-          <div>
+        impactStats.map(({ value, title, description }, index) => (
+          <div data-aos="fade-up" data-aos-delay={index * 100}>
             <div class="text-brand-tealLight mb-2 font-serif text-4xl">
               {value}
             </div>

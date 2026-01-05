@@ -28,11 +28,13 @@ const frameworkItems = [
     <div class="mb-16 grid items-center gap-16 md:grid-cols-2">
       <div>
         <span
+          data-aos="fade-right"
           class="text-brand-teal mb-3 block text-xs font-bold tracking-[0.2em] uppercase"
         >
           Our Framework
         </span>
         <h2
+          data-aos="fade-right"
           class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl"
         >
           Navigating the Global <br />
@@ -40,7 +42,7 @@ const frameworkItems = [
         </h2>
       </div>
       <div>
-        <p class="text-lg text-slate-600">
+        <p data-aos="fade-left" class="text-lg text-slate-600">
           Numiq commits trained talent that adds operating leverage and
           execution capacity to help you make informed decisions across the
           value chain of activities.
@@ -50,8 +52,12 @@ const frameworkItems = [
 
     <div class="grid gap-8 md:grid-cols-3">
       {
-        frameworkItems.map(({ title, description, Icon }) => (
-          <div class="hover:border-brand-teal group rounded-sm border border-slate-200 bg-slate-50 p-8 transition-colors duration-300">
+        frameworkItems.map(({ title, description, Icon }, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            class="hover:border-brand-teal group rounded-sm border border-slate-200 bg-slate-50 p-8 transition-colors duration-300"
+          >
             <div class="group-hover:border-brand-teal group-hover:bg-brand-teal mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white transition-all duration-300">
               <Icon class="text-brand-teal h-6 w-6 transition-colors group-hover:text-white" />
             </div>
