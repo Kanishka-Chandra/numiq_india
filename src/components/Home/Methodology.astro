@@ -1,101 +1,55 @@
 ---
-import { ChessKnight, Cog, Search, TrendingUp } from "@lucide/astro";
-
 const steps = [
   {
     number: "01",
-    icon: Search,
     title: "Structured Onboarding",
-    text: `We start by understanding your internal processes, existing
-           documentation, reporting structures, and data flows. This foundation
-           ensures our support integrates smoothly with your operating model.`,
+    description: "Understanding processes and data flows.",
   },
   {
     number: "02",
-    icon: ChessKnight,
-    title: "Workflow & Reporting Design",
-    text: `We collaborate with your team to define clear deliverables—financial
-           models, dashboards, reconciliations, or management reports—along with
-           timelines, review cycles, and quality parameters for consistent output.`,
+    title: "Workflow Design",
+    description: "Defining clear deliverables and reports.",
   },
   {
     number: "03",
-    icon: Cog,
-    title: "Execution With Analytical Precision",
-    text: `Our analysts prepare, review, and refine the agreed-upon materials
-           with meticulous attention to detail. This includes data cleaning,
-           model updates, reconciliations, variance analysis, and documentation,
-           all aligned to your internal standards.`,
+    title: "Execution",
+    description: "Refining materials with analytical precision.",
   },
   {
     number: "04",
-    icon: TrendingUp,
-    title: "Ongoing Support & Enhancement",
-    text: `As your requirements evolve, we continually refine workflows,
-           strengthen reporting structures, and enhance analytical depth—ensuring
-           long-term efficiency and seamless collaboration with your in-house
-           teams.`,
+    title: "Ongoing Support",
+    description: "Continual refinement and collaboration.",
   },
 ];
 ---
 
-<section
-  class="relative space-y-10 overflow-hidden bg-gray-950 px-8 py-10 md:space-y-20 md:px-16 md:py-20"
-  id="methodology"
->
-  <div
-    class="relative z-10 flex max-w-2xl flex-col items-start justify-between"
-  >
-    <span
-      class="mb-12 rounded-full border border-teal-600/20 bg-teal-900/30 px-3 py-1 text-xs font-bold tracking-wider text-teal-400 uppercase"
-    >
-      Our Methodology
-    </span>
-    <h2 class="mb-6 text-3xl font-bold text-gray-100 md:text-5xl">
-      The
-      <span class="text-teal-400">Numiq Standard</span> of Delivery
-    </h2>
-    <p class="text-lg text-gray-400">
-      A rigorous, four-step methodology designed to ensure precision, maximize
-      value, and mitigate risk for every client engagement.
-    </p>
-  </div>
-  <div
-    class="relative z-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"
-  >
-    {
-      steps.map((step, index) => {
-        const Icon = step.icon;
-        return (
-          <div
-            data-aos="flip-left"
-            data-aos="fade-up"
-            data-aos-delay={`${index * 200}`}
-            class="group hover-card relative rounded-2xl border border-teal-900/30 bg-gray-900 p-8 shadow-sm transition-all duration-300 hover:border-teal-500/30 hover:bg-gray-800"
-          >
-            <div class="flex items-start justify-between">
-              <div class="flex size-14 items-center justify-center rounded-xl bg-gray-800 text-2xl text-teal-500 transition-colors duration-300 group-hover:bg-teal-600 group-hover:text-gray-50">
-                <Icon />
-              </div>
-              <div class="text-5xl font-bold text-teal-900/50 transition-colors select-none group-hover:text-teal-800/50">
-                {step.number}
-              </div>
-            </div>
+<section id="methodology" class="border-y border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-16 grid gap-16 md:grid-cols-2">
+      <h2 class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl">
+        The Numiq <br />
+        Standard of Delivery
+      </h2>
+      <p class="text-lg text-slate-600">
+        A rigorous, four-step methodology designed to ensure precision, maximize
+        value, and mitigate risk for every client engagement.
+      </p>
+    </div>
 
-            <h3 class="mt-8 mb-4 text-xl font-bold text-gray-100">
-              {step.title}
-            </h3>
-            <p class="leading-relaxed text-gray-400">{step.text}</p>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+      {
+        steps.map(({ number, title, description }) => (
+          <div class="hover:border-brand-teal group relative border-t border-slate-300 pt-8 transition-colors duration-300">
+            <div class="group-hover:text-brand-teal mb-4 font-serif text-4xl text-slate-200 transition-colors">
+              {number}
+            </div>
+            <h4 class="mb-2 font-serif text-xl text-slate-900">{title}</h4>
+            <p class="text-sm text-slate-500 transition-colors group-hover:text-slate-700">
+              {description}
+            </p>
           </div>
-        );
-      })
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
-
-<style>
-  .hover-card:hover {
-    box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.15);
-    transform: translateY(-4px);
-  }
-</style>

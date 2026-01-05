@@ -1,93 +1,56 @@
 ---
-import { Building2, Landmark, Rocket, TrendingUp } from "@lucide/astro";
+import { Briefcase, Building2, Globe2, Users } from "@lucide/astro";
 
-const sectors = [
+const industries = [
   {
     title: "Investment & Asset Management",
-    description:
-      "Strategic portfolio management and asset optimization for sustainable growth and long-term value creation.",
-    icon: TrendingUp,
+    Icon: Briefcase,
   },
   {
-    title: "Banking, Capital Markets & Lending",
-    description:
-      "Comprehensive financial solutions for banking institutions, capital market operations, and lending structures.",
-    icon: Landmark,
+    title: "Banking & Capital Markets",
+    Icon: Building2,
   },
   {
-    title: "Advisory, Accounting & Real Assets",
-    description:
-      "Expert guidance in accounting standards, strategic advisory, and management of tangible real estate assets.",
-    icon: Building2,
+    title: "Advisory & Real Assets",
+    Icon: Globe2,
   },
   {
-    title: "Entrepreneurs",
-    description:
-      "Empowering founders and startups with financial clarity, growth strategies, and operational scalability.",
-    icon: Rocket,
+    title: "Entrepreneurs & Startups",
+    Icon: Users,
   },
 ];
 ---
 
-<section
-  id="industries"
-  class="relative space-y-10 overflow-hidden bg-gray-950 px-8 py-10 md:space-y-20 md:px-16 md:py-20"
->
-  <div class="flex max-w-2xl flex-col items-start justify-between">
-    <span
-      class="mb-12 rounded-full border border-teal-600/20 bg-teal-900/30 px-3 py-1 text-xs font-bold tracking-wider text-teal-400 uppercase"
-    >
-      Who We Help
-    </span>
-    <h2 class="mb-6 text-3xl font-bold text-gray-100 md:text-5xl">
-      <span class="text-teal-400">Expertise</span> for Every Industry
-    </h2>
-    <p class="text-lg text-gray-400">
-      We understand the unique financial challenges of different businesses and
-      how to solve them.
-    </p>
+<section id="industries" class="relative overflow-hidden bg-slate-50">
+  {/* Subtle teal blur in corner */}
+  <div
+    class="bg-brand-teal/10 pointer-events-none absolute top-0 right-0 h-full w-1/3 blur-3xl"
+  >
   </div>
 
-  <div
-    class="grid grid-cols-1 place-items-stretch gap-8 sm:grid-cols-2 md:grid-cols-4"
-  >
-    {
-      sectors.map((sector, index) => {
-        const Icon = sector.icon;
-        return (
-          <div
-            data-aos="fade-right"
-            data-aos-delay={`${index * 200}`}
-            class="group relative flex cursor-default flex-col items-start justify-start rounded-2xl border border-teal-900/30 bg-gray-900 p-8 shadow-sm transition-all duration-500 hover:border-teal-500 hover:bg-teal-700 hover:shadow-2xl hover:shadow-teal-900/50"
-          >
-            <div class="mb-6 text-4xl text-teal-500 transition-colors group-hover:text-gray-50">
-              <Icon />
+  <div class="relative z-10 mx-auto max-w-7xl px-6">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 font-serif text-4xl text-slate-900">
+        Expertise for Every Industry
+      </h2>
+      <p class="text-slate-600">
+        We understand the unique financial challenges of different businesses.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+      {
+        industries.map(({ title, Icon }) => (
+          <div class="hover:border-brand-teal group flex aspect-square flex-col items-center justify-center rounded-sm border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:shadow-lg">
+            <div class="text-brand-teal mb-4 transition-transform duration-300 group-hover:scale-110">
+              <Icon class="h-9 w-9" />
             </div>
-            <div>
-              <h3 class="relative z-10 mb-3 text-xl font-bold text-gray-100 transition-colors group-hover:text-gray-50">
-                {sector.title}
-              </h3>
-              <p class="relative z-10 text-sm leading-relaxed text-gray-400 transition-colors group-hover:text-gray-50">
-                {sector.description}
-              </p>
-            </div>
+            <h3 class="font-serif text-lg text-slate-700 transition-colors group-hover:text-slate-900">
+              {title}
+            </h3>
           </div>
-        );
-      })
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
-
-<style>
-  #industries::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-  }
-</style>

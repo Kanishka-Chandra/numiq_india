@@ -6,32 +6,32 @@ const navbarLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
   { href: "/#methodology", label: "Methodology" },
-  { href: "/#global-impact", label: "Global Impact" },
+  { href: "/#impact", label: "Global Impact" }, // Updated href to match section ID in GlobalImpact.astro
   { href: "/#industries", label: "Industries" },
-  { href: "/#why-choose-us", label: "Why Choose Us" },
+  { href: "/#why-us", label: "Why Choose Us" }, // Updated href to match section ID in WhyChooseUs.astro
   { href: "/contact", label: "Contact" },
 ];
 ---
 
 <header
-  class="fixed inset-x-0 top-0 z-50 flex flex-col gap-4 border-b border-teal-800 bg-gray-950 px-8 py-4 shadow-sm backdrop-blur-md transition-all duration-300 md:px-16"
+  class="border-brand-teal/20 fixed inset-x-10 top-4 z-50 flex flex-col gap-4 rounded-lg border bg-white px-8 py-4 shadow-sm transition-all duration-300 md:px-12"
   id="navbar"
 >
   <div class="flex w-full items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="h-6 w-auto md:h-4 lg:h-6">
-      <img src="/logo-dark.png" alt="Numiq Logo" class="size-full" />
+    <a href="/" class="h-6 w-auto md:h-8">
+      <img src="/logo.png" alt="Numiq Logo" class="size-full object-contain" />
     </a>
 
     <!-- Desktop Menu -->
     <div
-      class="hidden items-center gap-4 text-center md:flex lg:mx-auto lg:gap-6"
+      class="hidden items-center gap-4 text-center md:flex lg:mx-auto lg:gap-8"
     >
       {
         navbarLinks.map((link) => (
           <a
             href={link.href}
-            class="text-sm font-bold text-gray-300 transition-colors hover:text-teal-500 lg:text-base"
+            class="hover:text-brand-teal text-sm font-medium text-slate-700 transition-colors lg:text-base"
           >
             {link.label}
           </a>
@@ -41,7 +41,7 @@ const navbarLinks = [
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="flex items-center p-2 text-gray-400 hover:text-gray-300 focus:outline-none md:hidden"
+      class="hover:text-brand-teal flex items-center p-2 text-slate-700 focus:outline-none md:hidden"
     >
       <MenuIcon class="size-6" />
     </button>
@@ -50,14 +50,14 @@ const navbarLinks = [
   <!-- Mobile Menu Panel -->
   <div
     id="mobile-menu"
-    class="hidden w-full border-t border-teal-800 md:hidden"
+    class="hidden w-full border-t border-slate-200 md:hidden"
   >
     <div class="flex flex-col items-stretch justify-center gap-2 py-4">
       {
         navbarLinks.map((link) => (
           <a
             href={link.href}
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:text-teal-500"
+            class="hover:text-brand-teal block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50"
           >
             {link.label}
           </a>

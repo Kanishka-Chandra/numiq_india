@@ -1,142 +1,82 @@
 ---
-import { Calculator, ChartLine, Check, ChessKing, Scale } from "@lucide/astro";
+import { BarChart3, Layers, PieChart, TrendingUp } from "@lucide/astro";
 
 const services = [
   {
-    icon: ChessKing,
-    title: "Transaction & Investment Analysis Support",
+    title: "Transaction & Investment Analysis",
     description:
-      "Specialized analytical support for private market funds, investment banks, and corporates. We assist your internal teams with robust financial models, valuation support, benchmarking studies, and high-quality materials for investment committees and management.",
-    features: [
-      "Financial Modeling & Valuation Support",
-      "Benchmarking & Data Analysis",
-      "IC Memos, Pitch Decks & Management Reports",
-    ],
+      "Specialized support for private market funds and investment banks. We assist with financial models, valuation support, and benchmarking studies.",
+    Icon: BarChart3,
   },
   {
-    icon: ChartLine,
-    title: "Dashboarding, Reporting & Business Intelligence",
+    title: "Business Intelligence & Reporting",
     description:
-      "Clear, decision-ready insights through Excel and BI-driven dashboards. We structure, analyze, and visualize operational and financial data to help clients monitor performance and make informed strategic decisions.",
-    features: [
-      "Custom Excel / BI Dashboards",
-      "Performance & Trend Analysis",
-      "Management Reporting Packs",
-    ],
+      "Clear, decision-ready insights through Excel and BI-driven dashboards. We structure, analyze, and visualize data for strategic decisions.",
+    Icon: PieChart,
   },
   {
-    icon: Calculator,
     title: "Accounting & Bookkeeping Support",
     description:
-      "End-to-end back-office accounting assistance designed to maintain accuracy and operational continuity. We support clients with core accounting workflows, reconciliations, and periodic management accounts.",
-    features: [
-      "GL, AP/AR & Reconciliations",
-      "Month-End Close Activities",
-      "Management Accounts Preparation",
-    ],
+      "End-to-end back-office accounting assistance designed to maintain accuracy. Core accounting workflows, reconciliations, and management accounts.",
+    Icon: Layers,
   },
   {
-    icon: Scale,
     title: "Financial Planning & Analysis (FP&A)",
     description:
-      "Structured FP&A support to strengthen internal planning processes. We assist with budgets, forecasts, variance analysis, and KPI reporting to help clients track performance and plan ahead with greater clarity.",
-    features: [
-      "Budgeting & Forecasting",
-      "Cash Flow Modeling",
-      "Variance & KPI Analysis",
-    ],
+      "Structured FP&A support to strengthen internal planning. Budgets, forecasts, variance analysis, and KPI reporting for greater clarity.",
+    Icon: TrendingUp,
   },
 ];
 ---
 
-<section
-  class="relative flex flex-col gap-y-10 bg-gray-950 px-8 py-10 md:gap-y-20 md:px-16 md:py-20"
-  id="services"
->
-  <!-- Background -->
-  <div
-    class="pointer-events-none absolute inset-0 z-0 opacity-80"
-    style={{
-      backgroundImage: `
-        repeating-linear-gradient(22.5deg, transparent, transparent 2px, rgba(75, 85, 99, 0.06) 2px, rgba(75, 85, 99, 0.06) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(67.5deg, transparent, transparent 2px, rgba(107, 114, 128, 0.05) 2px, rgba(107, 114, 128, 0.05) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(112.5deg, transparent, transparent 2px, rgba(55, 65, 81, 0.04) 2px, rgba(55, 65, 81, 0.04) 3px, transparent 3px, transparent 8px),
-        repeating-linear-gradient(157.5deg, transparent, transparent 2px, rgba(31, 41, 55, 0.03) 2px, rgba(31, 41, 55, 0.03) 3px, transparent 3px, transparent 8px)
-      `,
-    }}
-  >
-  </div>
-  <div class="flex max-w-4xl flex-col items-start justify-between">
-    <span
-      class="mb-12 rounded-full border border-teal-400/20 bg-teal-900 px-3 py-1 text-xs font-bold tracking-wider text-teal-300 uppercase"
-    >
-      Our Services
-    </span>
-    <h2 class="mb-6 text-3xl font-bold text-gray-200 md:text-5xl">
-      <span class="text-teal-300">Services</span> We Offer
-    </h2>
-    <div class="space-y-2 text-lg text-gray-400">
-      <p>
-        Numiq's team-as-a-service model continually refines workflows,
-        strengthen reporting structures, and enhance analytical depth - ensuring
-        long-term efficiency and seamless collaboration with your in-house
-        teams.
-      </p>
-      <p>
-        Our expertise lies in addressing the human resource challenges faced by
-        clients by providing highly skilled professionals to support across the
-        value chain. In short, our goal is to deliver value-add services for our
-        clients and enable them to focus on their core competencies.
-      </p>
-      <p>
-        Our uniquely layered team structure provides dedicated points of contact
-        for daily operations as well as strategic discussions, ensuring proper
-        quality control and service excellence.
+<section id="services" class="bg-slate-50">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-16 text-center">
+      <span
+        class="text-brand-teal mb-3 block text-xs font-bold tracking-[0.2em] uppercase"
+      >
+        Our Expertise
+      </span>
+      <h2 class="mb-4 font-serif text-4xl text-slate-900 md:text-5xl">
+        Services We Offer
+      </h2>
+      <p class="mx-auto max-w-2xl text-slate-600">
+        Numiq's team-as-a-service model refines workflows and enhances
+        analytical depth, enabling you to focus on core competencies.
       </p>
     </div>
-  </div>
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-    {
-      services.map((service, index) => {
-        const Icon = service.icon;
-        return (
-          <div
-            data-aos="flip-left"
-            data-aos="fade-up-right"
-            data-aos-delay={`${index * 200}`}
-            class="group relative overflow-hidden rounded-2xl border border-teal-900/30 bg-gray-900 p-10 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-teal-500/30 hover:shadow-2xl hover:shadow-teal-900/50"
-          >
-            {/* <!-- Card Glow --> */}
-            <div class="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-teal-900/20 blur-[50px] transition-all group-hover:bg-teal-800/20" />
 
-            <div
-              class="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-gray-800 text-teal-500 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-gray-50"
-              aria-hidden="true"
-            >
-              <Icon class="size-7" aria-hidden="true" />
+    <div class="grid gap-8 md:grid-cols-2">
+      {
+        services.map(({ title, description, Icon }) => (
+          <div class="group hover:border-brand-teal/50 relative overflow-hidden rounded-sm border border-slate-200 bg-white p-8 transition-all duration-300 hover:shadow-xl md:p-10">
+            {/* Background Icon */}
+            <div class="text-brand-teal absolute top-0 right-0 p-6 opacity-5 transition-all duration-300 group-hover:opacity-10">
+              <Icon class="h-16 w-16" />
             </div>
 
-            <h2 class="mb-4 text-2xl font-bold text-gray-100">
-              {service.title}
-            </h2>
+            {/* Foreground Icon */}
+            <div class="text-brand-teal mb-6">
+              <Icon class="h-8 w-8" />
+            </div>
 
-            <p class="mb-8 text-base leading-relaxed text-gray-400">
-              {service.description}
-            </p>
+            <h3 class="group-hover:text-brand-teal mb-4 font-serif text-2xl text-slate-900 transition-colors">
+              {title}
+            </h3>
 
-            <ul class="space-y-3 text-sm text-teal-400">
-              {service.features.map((feature) => (
-                <li class="flex items-center gap-3">
-                  <div class="flex size-5 items-center justify-center rounded-full bg-teal-900/40 text-teal-300">
-                    <Check class="size-3" aria-hidden="true" />
-                  </div>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <p class="mb-8 leading-relaxed text-slate-600">{description}</p>
+            {/* 
+            <a
+              href="#contact"
+              class="group-hover:text-brand-teal inline-flex items-center text-sm font-semibold tracking-widest text-slate-900 uppercase transition-colors"
+            >
+              Learn More
+              <ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
+            </a>
+            */}
           </div>
-        );
-      })
-    }
+        ))
+      }
+    </div>
   </div>
 </section>

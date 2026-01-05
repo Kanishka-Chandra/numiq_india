@@ -1,61 +1,46 @@
 <section
-  id="home"
-  class="relative max-h-fit overflow-hidden px-8 pt-20 pb-10 before:absolute before:inset-0 before:-z-5 before:bg-linear-to-br before:from-gray-900/90 before:to-teal-700/80 before:mix-blend-multiply md:px-16 md:pt-32 md:pb-20 portrait:min-h-svh landscape:min-h-[85svh]"
+  class="relative flex min-h-screen items-center justify-center overflow-hidden"
 >
-  <!-- Background Image -->
   <img
     src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     alt="Modern financial district skyscrapers"
-    class="absolute inset-0 -z-10 size-full object-cover opacity-90"
+    class="absolute inset-0 -z-20 size-full object-cover opacity-90"
   />
+  <div class="absolute inset-0 -z-10 bg-linear-to-b from-white/90 to-white/70">
+  </div>
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-2xl">
+  <div class="relative z-10 max-w-7xl pt-10 text-center">
     <span
-      data-aos="fade-right"
-      class="mb-6 inline-flex items-center justify-center rounded-full border border-teal-400/20 bg-teal-500/10 px-3 py-1 text-xs font-bold tracking-wide text-teal-200 uppercase backdrop-blur-sm"
+      class="border-brand-teal/30 text-brand-teal mb-4 inline-block rounded-full border bg-white/50 px-3 py-1 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm"
     >
-      GLOBAL FINANCIAL EXCELLENCE
+      Global Financial Excellence
     </span>
+
     <h1
-      data-aos="fade-right"
-      data-aos-delay="100"
-      class="mb-4 text-5xl leading-[1.1] font-bold tracking-tight text-balance text-teal-50 md:text-6xl"
+      class="mb-6 font-serif text-5xl leading-tight text-slate-900 md:text-7xl lg:text-8xl"
     >
-      Precision in
-      <span
-        class="bg-linear-to-r from-teal-400 to-teal-200 bg-clip-text text-transparent"
-        >Financial Intelligence</span
-      >
-      <br /> & Analytical Support
+      Precision in <br />
+      <span class="teal-linear-text italic">Financial Intelligence</span>
     </h1>
+
     <p
-      data-aos="fade-right"
-      data-aos-delay="200"
-      class="mb-10 max-w-2xl text-base leading-relaxed text-balance text-slate-200 md:text-xl"
+      class="mx-auto mb-8 max-w-2xl text-lg leading-relaxed font-light text-slate-600 md:text-xl"
     >
       We deliver bespoke investment diligence, research, valuations, and
       accounting support powered by advanced data analytics and AI to turn
-      complex information into confident action. We helps clients operate
-      smarter and grow stronger by integrating advisory capabilities with
-      scalable delivery.
+      complex information into confident action.
     </p>
 
-    <div
-      data-aos="fade-right"
-      data-aos-delay="300"
-      data-aos-anchor-placement="bottom-bottom"
-      class="flex flex-wrap gap-2 md:gap-4"
-    >
+    <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
       <a
-        href="#contact"
-        class="rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-teal-50 transition-all hover:bg-teal-500 hover:shadow-lg hover:shadow-teal-500/25 md:px-8 md:py-4 md:text-base"
+        href="/contact"
+        class="bg-brand-teal min-w-[180px] px-8 py-4 text-center font-semibold tracking-widest text-white uppercase shadow-lg transition-colors duration-300 hover:bg-slate-900 hover:shadow-xl"
       >
         Get Started
       </a>
       <a
         href="#services"
-        class="rounded-full border border-teal-50/10 bg-teal-50/5 px-4 py-2 text-sm font-semibold text-teal-50 transition-all hover:bg-teal-50/10 md:px-8 md:py-4 md:text-base"
+        class="hover:border-brand-teal hover:text-brand-teal min-w-[180px] border border-slate-300 bg-white/50 px-8 py-4 text-center font-semibold tracking-widest text-slate-900 uppercase transition-colors duration-300 hover:bg-white"
       >
         Our Services
       </a>

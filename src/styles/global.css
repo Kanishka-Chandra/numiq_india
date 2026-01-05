@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -6,8 +6,43 @@
   html {
     scroll-behavior: smooth;
   }
+  body > * {
+    @apply mx-auto max-w-400;
+  }
+  body > section {
+    @apply mx-auto max-w-400 px-8 py-10 md:px-16 md:py-20;
+  }
+
+  /* Custom Scrollbar - Light Mode */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0f766e;
+  }
+
+  .teal-linear-text {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #115e59 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @theme {
-  --font-urbanist: "Urbanist", sans-serif;
+  --color-brand-dark: #0f172a;
+  --color-brand-deep: #020617;
+  --color-brand-teal: #0f766e;
+  --color-brand-tealLight: #2dd4bf;
+  --color-brand-gray: #64748b;
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
 }

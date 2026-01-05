@@ -1,83 +1,67 @@
 ---
-import { Earth, Network, Receipt } from "@lucide/astro";
+import { FileBarChart2, Globe, LineChart } from "@lucide/astro";
 
-const framework = [
+const frameworkItems = [
   {
-    icon: Network,
     title: "Analytical Rigor & Predictive Insight",
-    text: `We combine structured financial analysis with data-driven forecasting
-           techniques to help clients anticipate performance trajectories,
-           identify operational patterns, and strengthen internal decision-making.
-           Our role is to enhance clarity—not to provide investment advice or
-           market recommendations.`,
+    description:
+      "We combine structured financial analysis with data-driven forecasting techniques to help clients anticipate performance trajectories and identify operational patterns.",
+    Icon: LineChart,
   },
   {
-    icon: Earth,
     title: "Global Delivery, Local Integration",
-    text: `Our offshore model enables clients across geographies to extend their
-           in-house analytical and finance teams seamlessly. We adapt to diverse
-           reporting norms, internal workflows, and institutional standards,
-           ensuring consistent, high-quality outputs for global stakeholders.`,
+    description:
+      "Our offshore model enables clients across geographies to extend their in-house analytical and finance teams seamlessly, adapting to diverse reporting norms.",
+    Icon: Globe,
   },
   {
-    icon: Receipt,
     title: "Consistent, Standardized Reporting",
-    text: `We support clients in maintaining structured, comparable, and
-           transparent reporting through well-defined financial models,
-           management reports, dashboards, and analytical documentation. Our
-           outputs align with internal requirements and global best practices,
-           enabling smoother reviews and stronger governance.`,
+    description:
+      "We support clients in maintaining structured, comparable, and transparent reporting through well-defined financial models, dashboards, and documentation.",
+    Icon: FileBarChart2,
   },
 ];
 ---
 
-<section
-  class="relative space-y-10 bg-gray-950 px-8 py-10 md:space-y-20 md:px-16 md:py-20"
-  id="global-themes"
->
-  <div
-    class="relative z-10 flex max-w-2xl flex-col items-start justify-between"
-  >
-    <span
-      class="mb-12 rounded-full border border-teal-600/20 bg-teal-900/30 px-3 py-1 text-xs font-bold tracking-wider text-teal-400 uppercase"
-    >
-      Our Framework
-    </span>
+<section class="border-b border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-16 grid items-center gap-16 md:grid-cols-2">
+      <div>
+        <span
+          class="text-brand-teal mb-3 block text-xs font-bold tracking-[0.2em] uppercase"
+        >
+          Our Framework
+        </span>
+        <h2
+          class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl"
+        >
+          Navigating the Global <br />
+          Financial Landscape
+        </h2>
+      </div>
+      <div>
+        <p class="text-lg text-slate-600">
+          Numiq commits trained talent that adds operating leverage and
+          execution capacity to help you make informed decisions across the
+          value chain of activities.
+        </p>
+      </div>
+    </div>
 
-    <h2 class="mb-6 text-3xl font-bold text-gray-100 md:text-5xl">
-      Navigating the <span class="text-teal-400"
-        >Global Financial Landscape</span
-      >
-    </h2>
-
-    <p class="text-lg text-gray-400">
-      Numiq commits trained talent that adds operating leverage and execution
-      capacity to help you make informed decisions across the value chain of
-      activities.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-    {
-      framework.map((item, index) => {
-        const Icon = item.icon;
-        return (
-          <div
-            data-aos="zoom-in"
-            data-aos="fade-up"
-            data-aos-delay={`${index * 200}`}
-            class="group rounded-2xl border border-teal-900/30 bg-gray-900 p-10 text-center transition-all hover:-translate-y-2 hover:border-teal-500/30 hover:bg-gray-800 hover:shadow-2xl hover:shadow-teal-900/10"
-          >
-            <div class="mx-auto mb-8 flex size-24 items-center justify-center rounded-full border-4 border-teal-900/20 bg-teal-900/10 text-4xl text-teal-500 shadow-sm transition-all group-hover:scale-110 group-hover:border-teal-500/20 group-hover:text-teal-400">
-              <Icon />
+    <div class="grid gap-8 md:grid-cols-3">
+      {
+        frameworkItems.map(({ title, description, Icon }) => (
+          <div class="hover:border-brand-teal group rounded-sm border border-slate-200 bg-slate-50 p-8 transition-colors duration-300">
+            <div class="group-hover:border-brand-teal group-hover:bg-brand-teal mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white transition-all duration-300">
+              <Icon class="text-brand-teal h-6 w-6 transition-colors group-hover:text-white" />
             </div>
 
-            <h4 class="mb-4 text-2xl font-bold text-gray-100">{item.title}</h4>
+            <h3 class="mb-4 font-serif text-xl text-slate-900">{title}</h3>
 
-            <p class="px-4 leading-relaxed text-gray-400">{item.text}</p>
+            <p class="text-sm leading-relaxed text-slate-600">{description}</p>
           </div>
-        );
-      })
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
