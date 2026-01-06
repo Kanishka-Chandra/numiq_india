@@ -1,8 +1,5 @@
-<footer
-  id="contact"
-  class="bg-brand-deep border-t border-white/10 px-8 md:px-16"
->
-  <!-- Top Footer -->
+<footer class="bg-brand-deep border-t border-white/10 px-8 md:px-16">
+  {/* Top Footer */}
   <div class="py-10 md:py-20">
     <a
       href="/"
@@ -16,30 +13,63 @@
     </a>
 
     <div class="grid gap-6 md:grid-cols-2">
-      <!-- Left Column -->
+      {/* Left Column */}
       <p class="max-w-sm text-slate-500">
         Empowering businesses globally with precision, integrity, and AI-driven
         strategic financial intelligence. Your trusted partner in sustainable
         growth.
       </p>
 
-      <!-- Right Column -->
+      {/* Right Column */}
       <div class="text-slate-400 md:text-right">
         <p>Telangana, India</p>
-        <p class="mt-1">info@numiq.co</p>
-        <p class="mt-1">+91 40 12345678</p>
+        <p class="mt-1">
+          <a
+            href="mailto:info@numiq.co"
+            class="transition-colors hover:text-gray-100"
+          >
+            info@numiq.co
+          </a>
+        </p>
+        <p class="mt-1">
+          <a
+            href="tel:+914012345678"
+            class="transition-colors hover:text-gray-100"
+          >
+            +91 40 1234 5678
+          </a>
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- Bottom Footer -->
+  {/* Bottom Footer */}
   <div
     class="flex flex-col-reverse items-start justify-between gap-4 border-t border-white/10 py-6 text-xs tracking-widest text-slate-600 uppercase md:flex-row"
   >
-    <p>© 2025 Pranito Ventures LLP (Numiq). All rights reserved.</p>
+    <div>
+      <p>© 2025 Pranito Ventures LLP (Numiq). All rights reserved.</p>
+
+      <a
+        href="https://60fps.co.in/"
+        class="group mt-4 block md:hidden"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span> - </span>
+        <span class="transition-all group-hover:text-gray-100">
+          Developed by
+        </span>
+        <span
+          class="transition-all group-hover:text-gray-100 group-hover:underline"
+        >
+          60fps Studios
+        </span>
+      </a>
+    </div>
 
     <div class="md:text-right">
-      <div class="flex items-center justify-center gap-6">
+      <nav class="flex items-center justify-center gap-6">
         {
           [
             { label: "Privacy Policy", href: "/privacy-policy" },
@@ -50,11 +80,17 @@
             </a>
           ))
         }
-      </div>
-      <a href="https://60fps.co.in/" class="group mt-4"
-        ><span> - </span>
-        <span class="transition-all group-hover:text-gray-100"
-          >Developed by
+      </nav>
+
+      <a
+        href="https://60fps.co.in/"
+        class="group mt-4 hidden md:block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span> - </span>
+        <span class="transition-all group-hover:text-gray-100">
+          Developed by
         </span>
         <span
           class="transition-all group-hover:text-gray-100 group-hover:underline"
