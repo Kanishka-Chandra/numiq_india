@@ -2,30 +2,34 @@
 const steps = [
   {
     number: "01",
-    title: "Structured Onboarding",
-    description: "Understanding processes and data flows.",
+    title: "Structured Onboarding & Process",
+    description:
+      " Start by understanding your workflows end-to-end: who owns what, how data moves across systems/files, what the critical outputs are, so execution starts with clarity.",
   },
   {
     number: "02",
-    title: "Workflow Design",
-    description: "Defining clear deliverables and reports.",
+    title: "Three-Layer Execution & Quality Control",
+    description:
+      "Every deliverable runs through a three-layer workflow i.e. build, review, and value-add, so the final output is accurate, consistent, and decision-ready.",
   },
   {
     number: "03",
-    title: "Execution",
-    description: "Refining materials with analytical precision.",
+    title: "Prompt Alignment & Communication",
+    description:
+      "Run your engagement like an extension of your team with clear priorities, constant visibility, and fast iterations.",
   },
   {
     number: "04",
-    title: "Ongoing Support",
-    description: "Continual refinement and collaboration.",
+    title: "Workflow Optimization & Scale",
+    description:
+      "Once delivery is stable, we optimize by refining workflows, strengthen reporting, and improve analytical depth- while staying tightly connected to your team.",
   },
 ];
 ---
 
 <section id="methodology" class="border-y border-slate-200 bg-white">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="mb-16 grid gap-16 md:grid-cols-2">
+    <div class="mb-16 grid items-center justify-between gap-16 md:grid-cols-2">
       <h2
         data-aos="fade-right"
         class="font-serif text-4xl leading-tight text-slate-900 md:text-5xl"
@@ -50,7 +54,17 @@ const steps = [
             <div class="group-hover:text-brand-teal mb-4 font-serif text-4xl text-slate-200 transition-colors">
               {number}
             </div>
-            <h3 class="mb-2 font-serif text-xl text-slate-900">{title}</h3>
+            <h3 class="mb-2 font-serif text-xl text-slate-900">
+              {title === "Workflow Optimization & Scale" ? (
+                <>
+                  Workflow Optimization &{" "}
+                  <span class="block md:block">Scale</span>
+                </>
+              ) : (
+                title
+              )}
+            </h3>
+
             <p class="text-sm text-slate-500 transition-colors group-hover:text-slate-700">
               {description}
             </p>
