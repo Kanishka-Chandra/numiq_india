@@ -6,14 +6,14 @@
     scroll-behavior: smooth;
     @apply overflow-x-hidden overflow-y-auto;
   }
+
   body > * {
-    @apply mx-auto max-w-400;
+    @apply mx-auto max-w-500;
   }
   body > section {
-    @apply mx-auto max-w-400 px-8 py-10 md:px-16 md:py-20;
+    @apply mx-auto max-w-500 px-8 py-10 md:px-16 md:py-20;
   }
 
-  /* Custom Scrollbar - Light Mode */
   ::-webkit-scrollbar {
     width: 8px;
   }

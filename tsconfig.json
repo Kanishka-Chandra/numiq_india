@@ -13,24 +13,20 @@
 
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"]
     },
 
-    // Enhanced type checking (building on astro/tsconfigs/strict)
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
 
-    // Import/export settings
     "verbatimModuleSyntax": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
 
-    // Better developer experience
     "incremental": true,
     "skipLibCheck": true
   }

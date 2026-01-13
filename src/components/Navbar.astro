@@ -3,12 +3,8 @@ import { MenuIcon } from "@lucide/astro";
 
 const navbarLinks = [
   { href: "/#home", label: "Home" },
-  // { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
-  // { href: "/#methodology", label: "Methodology" },
-  // { href: "/#impact", label: "Global Impact" },
   { href: "/#industries", label: "Industries" },
-  // { href: "/#why-us", label: "Why Choose Us" },
   { href: "/contact", label: "Contact" },
 ];
 ---
@@ -17,15 +13,13 @@ const navbarLinks = [
   class="border-brand-teal/20 fixed inset-x-4 top-4 z-50 flex flex-col gap-4 rounded-2xl border bg-white px-8 py-4 shadow-sm transition-all duration-300 md:inset-x-10 md:px-12"
   id="navbar"
 >
-  <div class="flex w-full items-center justify-between">
-    <!-- Logo -->
-    <a href="/" class="h-6 w-auto md:h-8">
+  <div class="flex w-full items-center max-md:justify-between">
+    <a href="/" class="h-6 w-auto max-md:mr-auto md:h-8">
       <img src="/logo.png" alt="Numiq Logo" class="size-full object-contain" />
     </a>
 
-    <!-- Desktop Menu -->
     <div
-      class="hidden items-center gap-4 text-center md:flex lg:mx-auto lg:gap-8"
+      class="hidden items-center gap-4 text-center md:mx-auto md:flex lg:gap-8"
     >
       {
         navbarLinks.map((link) => (
@@ -38,16 +32,14 @@ const navbarLinks = [
         ))
       }
     </div>
-    <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="hover:text-brand-teal flex items-center p-2 text-slate-700 focus:outline-none md:hidden"
+      class="hover:text-brand-teal flex items-center p-2 text-slate-700 focus:outline-none max-md:ml-auto md:hidden"
     >
       <MenuIcon class="size-6" />
     </button>
   </div>
 
-  <!-- Mobile Menu Panel -->
   <div
     id="mobile-menu"
     class="hidden w-full border-t border-slate-200 md:hidden"
